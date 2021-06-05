@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from blog.raphaelmarco.com/sending-negative-money/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 23 May 2021 07:17:55 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Sending Negative Money</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen2385.css?v=e34684f224" />
+
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="canonical" href="index.html" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <link rel="amphtml" href="amp/index.html" />
+    
+    <meta property="og:site_name" content="raph." />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Sending Negative Money" />
+    <meta property="og:description" content="Input validation is important. Does the field ask for a phone number? Then accept everything except non-numeric characters. Does the field let you select from a number of options? Then accept everything except what is not from the options.  It goes by the saying, &amp;quot;Never trust user input&amp;quot;" />
+    <meta property="og:url" content="index.html" />
+    <meta property="og:image" content="/images/2018/06/money-less-0.png" />
+    <meta property="article:published_time" content="2018-06-04T07:41:40.000Z" />
+    <meta property="article:modified_time" content="2018-06-04T15:23:27.000Z" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sending Negative Money" />
+    <meta name="twitter:description" content="Input validation is important. Does the field ask for a phone number? Then accept everything except non-numeric characters. Does the field let you select from a number of options? Then accept everything except what is not from the options.  It goes by the saying, &amp;quot;Never trust user input&amp;quot;" />
+    <meta name="twitter:url" content="index.html" />
+    <meta name="twitter:image" content="/images/2018/06/money-less-0.png" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Raphael Marco" />
+    <meta property="og:image:width" content="1920" />
+    <meta property="og:image:height" content="1080" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "raph.",
+        "url": "https://blog.raphaelmarco.com/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "/images/2020/05/Untitled-1-1-3.png",
+            "width": 60,
+            "height": 60
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Raphael Marco",
+        "url": "https://blog.raphaelmarco.com/author/raphael/",
+        "sameAs": []
+    },
+    "headline": "Sending Negative Money",
+    "url": "https://blog.raphaelmarco.com/sending-negative-money/",
+    "datePublished": "2018-06-04T07:41:40.000Z",
+    "dateModified": "2018-06-04T15:23:27.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "/images/2018/06/money-less-0.png",
+        "width": 1920,
+        "height": 1080
+    },
+    "description": "Input validation is important. Does the field ask for a phone number? Then\naccept everything except non-numeric characters. Does the field let you select\nfrom a number of options? Then accept everything except what is not from the\noptions.\n\nIt goes by the saying, &quot;Never trust user input&quot;. And it does not only cover the\nfields visible in UI where the user can type, but also those who are sent in\nevery HTTP request such as cookies, user agent, and referrer. Everything in a\nHTTP request should be c",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.raphaelmarco.com/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 3.35" />
+    <link rel="alternate" type="application/rss+xml" title="raph." href="/rss/index.html" />
+    <style>
+    .site-home-header .site-header-background.no-image,
+    .site-nav-main {
+        background: linear-gradient(141deg, #112835, #243b55 71%, #283c6b);
+    }
+    
+    .site-header-background:not(.responsive-header-img) .site-nav-left-wrapper:after,
+    .site-nav-main .site-nav-left-wrapper:after {
+        background: transparent;
+    }
+</style>
+
+</head>
+<body class="post-template">
+
+    <div class="site-wrapper">
+
+        
+
+<header class="site-header">
+    <div class="outer site-nav-main">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left-wrapper">
+        <div class="site-nav-left">
+                <a class="site-nav-logo" href="/index.html"><img src="/images/2020/05/Untitled-1-1-3.png" alt="raph." /></a>
+            <div class="site-nav-content">
+                    <ul class="nav">
+    <li class="nav-about"><a href="https://raphaelmarco.com/about">About</a></li>
+    <li class="nav-projects"><a href="https://raphaelmarco.com/projects">Projects</a></li>
+    <li class="nav-labs"><a href="https://raphaelmarco.com/labs">Labs</a></li>
+</ul>
+
+                    <span class="nav-post-title ">Sending Negative Money</span>
+            </div>
+        </div>
+    </div>
+    <div class="site-nav-right">
+            <div class="social-links">
+            </div>
+                <a class="rss-button" href="https://feedly.com/i/subscription/feed/https://blog.raphaelmarco.com/rss/" title="RSS" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="6.18" cy="17.82" r="2.18"/><path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/></svg>
+</a>
+
+    </div>
+</nav>
+    </div>
+</div></header>
+
+
+<main id="site-main" class="site-main outer">
+    <div class="inner">
+
+        <article class="post-full post ">
+
+            <header class="post-full-header">
+
+
+                <h1 class="post-full-title">Sending Negative Money</h1>
+
+
+                <div class="post-full-byline">
+
+                    <section class="post-full-byline-content">
+
+                        <ul class="author-list">
+                            <li class="author-list-item">
+
+                                <div class="author-card">
+                                    <div class="author-profile-image"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M3.513 18.998C4.749 15.504 8.082 13 12 13s7.251 2.504 8.487 5.998C18.47 21.442 15.417 23 12 23s-6.47-1.558-8.487-4.002zM12 12c2.21 0 4-2.79 4-5s-1.79-4-4-4-4 1.79-4 4 1.79 5 4 5z" fill="#FFF"/></g></svg>
+</div>
+                                    <div class="author-info">
+                                        <h2>Raphael Marco</h2>
+                                        <p>Read <a href="/author/raphael/index.html">more posts</a> by this author.</p>
+                                    </div>
+                                </div>
+
+                                <a href="/author/raphael/index.html" class="author-avatar author-profile-image"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M3.513 18.998C4.749 15.504 8.082 13 12 13s7.251 2.504 8.487 5.998C18.47 21.442 15.417 23 12 23s-6.47-1.558-8.487-4.002zM12 12c2.21 0 4-2.79 4-5s-1.79-4-4-4-4 1.79-4 4 1.79 5 4 5z" fill="#FFF"/></g></svg>
+</a>
+
+                            </li>
+                        </ul>
+
+                        <section class="post-full-byline-meta">
+                            <h4 class="author-name"><a href="/author/raphael/index.html">Raphael Marco</a></h4>
+                            <div class="byline-meta-content">
+                                <time class="byline-meta-date" datetime="2018-06-04">4 Jun 2018</time>
+                                <span class="byline-reading-time"><span class="bull">&bull;</span> 2 min read</span>
+                            </div>
+                        </section>
+
+                    </section>
+
+
+                </div>
+            </header>
+
+            <figure class="post-full-image">
+                <img
+                    srcset="/images/2018/06/money-less-0.png 300w,
+                            /images/2018/06/money-less-0.png 600w,
+                            /images/2018/06/money-less-0.png 1000w,
+                            /images/2018/06/money-less-0.png 2000w"
+                    sizes="(max-width: 800px) 400px,
+                        (max-width: 1170px) 1170px,
+                            2000px"
+                    src="/images/2018/06/money-less-0.png"
+                    alt="Sending Negative Money"
+                />
+            </figure>
+
+            <section class="post-full-content">
+                <div class="post-content">
+                    <!--kg-card-begin: markdown--><p>Input validation is important. Does the field ask for a phone number? Then accept everything except non-numeric characters. Does the field let you select from a number of options? Then accept everything except what is not from the options.</p>
+<p>It goes by the saying, &quot;Never trust user input&quot;. And it does not only cover the fields visible in UI where the user can type, but also those who are sent in every HTTP request such as cookies, user agent, and referrer. Everything in a HTTP request should be considered a user input.</p>
+<p><img src="https://imgs.xkcd.com/comics/exploits_of_a_mom.png" alt=""><br>
+<a href="https://xkcd.com/327/">https://xkcd.com/327/</a></p>
+<p>There's also a client-side validation and server-side validation. Client-side validation refers to the validation process made by the software from the end user before sending a request to the server. While server-side validation refers to the validation process made by the serving application to the data submitted to it.</p>
+<p>Client-side validation is great as it provides the user an instant feedback to their input. But never forget to do a server-side validation as the client-side validation may be bypassed.</p>
+<p>Of course, you already know that part. And we're not here to talk about SQL Injection.</p>
+<p>Now let me tell you a hypothetical situation:</p>
+<ol>
+<li>
+<p>We have two people, John and Jane. They both have an account at Acme Bank. John has <strong>$5000</strong> in his account, and Jane has <strong>$200</strong> in her account.</p>
+</li>
+<li>
+<p>John sent <strong>$500</strong> to Jane. Now John has <strong>$4500</strong> and Jane has <strong>$700</strong>.</p>
+</li>
+<li>
+<p>Jane tried sending <strong>$1000</strong> to John but the banking system refused with the error message <em>&quot;Insufficient funds.&quot;</em></p>
+</li>
+<li>
+<p>Jane tried sending <strong>-$1000</strong> to John <em>(Yes, it's negative <strong>1000</strong>)</em>. Now John has <strong>$3500</strong> and Jane has <strong>$1700</strong>.</p>
+</li>
+</ol>
+<p>Why is that the case? Isn't Jane the one who sent the money to John, but why is it that Jane has more money than she has before and John has less money than he has before.</p>
+<h3 id="thesystemfailedtovalidatetheinput">The system failed to validate the input.</h3>
+<p>It was fine when the system refused the money transfer because of <code>A &gt; B</code>. But it failed to checked for <code>VALUE &lt; 0</code>.</p>
+<p>Because of that, the following happened:</p>
+<ul>
+<li>
+<p>John has <strong>$4500</strong> plus the <strong>-$1000</strong> sent by Jane equals <strong>$3500</strong>.</p>
+<p>4500 + (-1000) = 3500</p>
+</li>
+<li>
+<p>Jane has <strong>$700</strong> minus the <strong>-$1000</strong> she sent to John equals <strong>$1700</strong>.</p>
+<p>700 - (-1000) = 1700</p>
+</li>
+</ul>
+<p>Jane managed to take John's money by sending him a negative value.</p>
+<p>Except that it was not a hypothetical situation. I encountered the same issue with the points system of a large chain store. There's a feature where you can send points to other users.</p>
+<p>The interface says that the maximum points that can be sent is 99999. Then I started wondering... what's the minimum that I can send?</p>
+<p>I tried sending 0 (zero) points, but it wouldn't let me. The app only accepts numbers greater than 0. Hey, it's client-side validation!</p>
+<p>Now let's try server-side validation. I launched an instance of Charles Web Proxy to see what's going on behind the scenes. There I captured how the app sends requests to their server. And there I was able to send negative points and have the hypothetical scenario work.</p>
+<p>Fortunately, their system does not do this anymore. And they updated their app to include SSL pinning.</p>
+<p>But still, never ignore the fact that negative numbers exist.</p>
+<!--kg-card-end: markdown-->
+                </div>
+            </section>
+
+
+
+        </article>
+
+    </div>
+</main>
+
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+
+                <article class="post-card post featured ">
+
+    <a class="post-card-image-link" href="/i-dont-trust-auto-saves/index.html">
+        <img class="post-card-image"
+            srcset="/images/2018/11/autosave.jpg 300w,
+                    /images/2018/11/autosave.jpg 600w,
+                    /images/2018/11/autosave.jpg 1000w,
+                    /images/2018/11/autosave.jpg 2000w"
+            sizes="(max-width: 1000px) 400px, 700px"
+            loading="lazy"
+            src="/images/2018/11/autosave.jpg"
+            alt="I Don&#x27;t Trust Auto-saves"
+        />
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="/i-dont-trust-auto-saves/index.html">
+
+            <header class="post-card-header">
+                <h2 class="post-card-title">I Don&#x27;t Trust Auto-saves</h2>
+            </header>
+
+            <section class="post-card-excerpt">
+                    <p>This is a tale about a disastrous auto-save feature that I baked in a project that I've worked on. Make sure that your auto-save are done "automatically."</p>
+            </section>
+
+        </a>
+
+        <footer class="post-card-meta">
+            <ul class="author-list">
+                <li class="author-list-item">
+            
+                    <div class="author-name-tooltip">
+                        Raphael Marco
+                    </div>
+            
+                    <a href="/author/raphael/index.html" class="static-avatar author-profile-image"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M3.513 18.998C4.749 15.504 8.082 13 12 13s7.251 2.504 8.487 5.998C18.47 21.442 15.417 23 12 23s-6.47-1.558-8.487-4.002zM12 12c2.21 0 4-2.79 4-5s-1.79-4-4-4-4 1.79-4 4 1.79 5 4 5z" fill="#FFF"/></g></svg>
+</a>
+                </li>
+            </ul>
+            <div class="post-card-byline-content">
+                <span><a href="/author/raphael/index.html">Raphael Marco</a></span>
+                <span class="post-card-byline-date"><time datetime="2018-11-23">23 Nov 2018</time> <span class="bull">&bull;</span> 2 min read</span>
+            </div>
+        </footer>
+
+    </div>
+
+</article>
+
+                <article class="post-card post ">
+
+    <a class="post-card-image-link" href="/done-with-my-first-talk/index.html">
+        <img class="post-card-image"
+            srcset="/images/2017/11/IMG_0002-1.jpg 300w,
+                    /images/2017/11/IMG_0002-1.jpg 600w,
+                    /images/2017/11/IMG_0002-1.jpg 1000w,
+                    /images/2017/11/IMG_0002-1.jpg 2000w"
+            sizes="(max-width: 1000px) 400px, 700px"
+            loading="lazy"
+            src="/images/2017/11/IMG_0002-1.jpg"
+            alt="Done With My First Talk"
+        />
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="/done-with-my-first-talk/index.html">
+
+            <header class="post-card-header">
+                <h2 class="post-card-title">Done With My First Talk</h2>
+            </header>
+
+            <section class="post-card-excerpt">
+                    <p>I did a talk. That's it. I did my first talk about web development to about 100 students of STI Novaliches. The feeling was a mixture of tense and excitement.</p>
+            </section>
+
+        </a>
+
+        <footer class="post-card-meta">
+            <ul class="author-list">
+                <li class="author-list-item">
+            
+                    <div class="author-name-tooltip">
+                        Raphael Marco
+                    </div>
+            
+                    <a href="/author/raphael/index.html" class="static-avatar author-profile-image"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M3.513 18.998C4.749 15.504 8.082 13 12 13s7.251 2.504 8.487 5.998C18.47 21.442 15.417 23 12 23s-6.47-1.558-8.487-4.002zM12 12c2.21 0 4-2.79 4-5s-1.79-4-4-4-4 1.79-4 4 1.79 5 4 5z" fill="#FFF"/></g></svg>
+</a>
+                </li>
+            </ul>
+            <div class="post-card-byline-content">
+                <span><a href="/author/raphael/index.html">Raphael Marco</a></span>
+                <span class="post-card-byline-date"><time datetime="2017-11-17">17 Nov 2017</time> <span class="bull">&bull;</span> 2 min read</span>
+            </div>
+        </footer>
+
+    </div>
+
+</article>
+        </div>
+    </div>
+</aside>
+
+
+
+
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="/index.html">raph.</a> &copy; 2021</section>
+                <nav class="site-footer-nav">
+                    <a href="/index.html">Latest Posts</a>
+                    
+                    
+                    <a href="https://ghost.org/" target="_blank" rel="noopener">Ghost</a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="/assets/built/casper2385.js?v=e34684f224"></script>
+
+    <script>
+        // Parse the URL parameter
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        // Give the parameter a variable name
+        var action = getParameterByName('action');
+
+        $(document).ready(function () {
+            if (action == 'subscribe') {
+                $('body').addClass("subscribe-success");
+            }
+
+            $('.subscribe-success-message .subscribe-close').click(function () {
+                $('.subscribe-success-message').addClass('close');
+            });
+
+            // Reset form on opening subscrion overlay
+            $('.subscribe-button').click(function() {
+                $('.subscribe-overlay form').removeClass();
+                $('.subscribe-email').val('');
+            });
+        });
+    </script>
+
+    <script>
+    $(document).ready(function () {
+        // FitVids - start
+        var $postContent = $(".post-full-content");
+        $postContent.fitVids();
+        // FitVids - end
+
+        // Replace nav with title on scroll - start
+        Casper.stickyNavTitle({
+            navSelector: '.site-nav-main',
+            titleSelector: '.post-full-title',
+            activeClass: 'nav-post-title-active'
+        });
+        // Replace nav with title on scroll - end
+
+        // Hover on avatar
+        var hoverTimeout;
+        $('.author-list-item').hover(function () {
+            var $this = $(this);
+
+            clearTimeout(hoverTimeout);
+
+            $('.author-card').removeClass('hovered');
+            $(this).children('.author-card').addClass('hovered');
+
+        }, function () {
+            var $this = $(this);
+
+            hoverTimeout = setTimeout(function () {
+                $this.children('.author-card').removeClass('hovered');
+            }, 800);
+        });
+    });
+</script>
+
+
+    <script async defer src="https://godseye.raphaelmarco.com/hello.js"></script>
+<noscript><img src="https://godseye.raphaelmarco.com/hello.gif" alt=""></noscript>
+
+</body>
+
+<!-- Mirrored from blog.raphaelmarco.com/sending-negative-money/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 23 May 2021 07:17:55 GMT -->
+</html>

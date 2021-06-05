@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from blog.raphaelmarco.com/i-dont-trust-auto-saves/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 23 May 2021 07:17:54 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>I Don&#x27;t Trust Auto-saves</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen2385.css?v=e34684f224" />
+
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="canonical" href="index.html" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <link rel="amphtml" href="amp/index.html" />
+    
+    <meta property="og:site_name" content="raph." />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="I Don&#x27;t Trust Auto-saves" />
+    <meta property="og:description" content="This is a tale about a disastrous auto-save feature that I baked in a project that I&#x27;ve worked on. Make sure that your auto-save are done &quot;automatically.&quot;" />
+    <meta property="og:url" content="index.html" />
+    <meta property="og:image" content="/images/2018/11/autosave.jpg" />
+    <meta property="article:published_time" content="2018-11-22T19:36:46.000Z" />
+    <meta property="article:modified_time" content="2020-02-22T09:15:10.000Z" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="I Don&#x27;t Trust Auto-saves" />
+    <meta name="twitter:description" content="This is a tale about a disastrous auto-save feature that I baked in a project that I&#x27;ve worked on. Make sure that your auto-save are done &quot;automatically.&quot;" />
+    <meta name="twitter:url" content="index.html" />
+    <meta name="twitter:image" content="/images/2018/11/autosave.jpg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Raphael Marco" />
+    <meta property="og:image:width" content="1920" />
+    <meta property="og:image:height" content="1080" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "raph.",
+        "url": "https://blog.raphaelmarco.com/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "/images/2020/05/Untitled-1-1-3.png",
+            "width": 60,
+            "height": 60
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Raphael Marco",
+        "url": "https://blog.raphaelmarco.com/author/raphael/",
+        "sameAs": []
+    },
+    "headline": "I Don&#x27;t Trust Auto-saves",
+    "url": "https://blog.raphaelmarco.com/i-dont-trust-auto-saves/",
+    "datePublished": "2018-11-22T19:36:46.000Z",
+    "dateModified": "2020-02-22T09:15:10.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "/images/2018/11/autosave.jpg",
+        "width": 1920,
+        "height": 1080
+    },
+    "description": "This is a tale about a disastrous auto-save feature that I baked in a project that I&#x27;ve worked on. Make sure that your auto-save are done &quot;automatically.&quot;",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.raphaelmarco.com/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 3.35" />
+    <link rel="alternate" type="application/rss+xml" title="raph." href="/rss/index.html" />
+    <style>
+    .site-home-header .site-header-background.no-image,
+    .site-nav-main {
+        background: linear-gradient(141deg, #112835, #243b55 71%, #283c6b);
+    }
+    
+    .site-header-background:not(.responsive-header-img) .site-nav-left-wrapper:after,
+    .site-nav-main .site-nav-left-wrapper:after {
+        background: transparent;
+    }
+</style>
+
+</head>
+<body class="post-template">
+
+    <div class="site-wrapper">
+
+        
+
+<header class="site-header">
+    <div class="outer site-nav-main">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left-wrapper">
+        <div class="site-nav-left">
+                <a class="site-nav-logo" href="/index.html"><img src="/images/2020/05/Untitled-1-1-3.png" alt="raph." /></a>
+            <div class="site-nav-content">
+                    <ul class="nav">
+    <li class="nav-about"><a href="https://raphaelmarco.com/about">About</a></li>
+    <li class="nav-projects"><a href="https://raphaelmarco.com/projects">Projects</a></li>
+    <li class="nav-labs"><a href="https://raphaelmarco.com/labs">Labs</a></li>
+</ul>
+
+                    <span class="nav-post-title ">I Don&#x27;t Trust Auto-saves</span>
+            </div>
+        </div>
+    </div>
+    <div class="site-nav-right">
+            <div class="social-links">
+            </div>
+                <a class="rss-button" href="https://feedly.com/i/subscription/feed/https://blog.raphaelmarco.com/rss/" title="RSS" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="6.18" cy="17.82" r="2.18"/><path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/></svg>
+</a>
+
+    </div>
+</nav>
+    </div>
+</div></header>
+
+
+<main id="site-main" class="site-main outer">
+    <div class="inner">
+
+        <article class="post-full post featured ">
+
+            <header class="post-full-header">
+
+
+                <h1 class="post-full-title">I Don&#x27;t Trust Auto-saves</h1>
+
+                <p class="post-full-custom-excerpt">This is a tale about a disastrous auto-save feature that I baked in a project that I&#x27;ve worked on. Make sure that your auto-save are done &quot;automatically.&quot;</p>
+
+                <div class="post-full-byline">
+
+                    <section class="post-full-byline-content">
+
+                        <ul class="author-list">
+                            <li class="author-list-item">
+
+                                <div class="author-card">
+                                    <div class="author-profile-image"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M3.513 18.998C4.749 15.504 8.082 13 12 13s7.251 2.504 8.487 5.998C18.47 21.442 15.417 23 12 23s-6.47-1.558-8.487-4.002zM12 12c2.21 0 4-2.79 4-5s-1.79-4-4-4-4 1.79-4 4 1.79 5 4 5z" fill="#FFF"/></g></svg>
+</div>
+                                    <div class="author-info">
+                                        <h2>Raphael Marco</h2>
+                                        <p>Read <a href="/author/raphael/index.html">more posts</a> by this author.</p>
+                                    </div>
+                                </div>
+
+                                <a href="/author/raphael/index.html" class="author-avatar author-profile-image"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M3.513 18.998C4.749 15.504 8.082 13 12 13s7.251 2.504 8.487 5.998C18.47 21.442 15.417 23 12 23s-6.47-1.558-8.487-4.002zM12 12c2.21 0 4-2.79 4-5s-1.79-4-4-4-4 1.79-4 4 1.79 5 4 5z" fill="#FFF"/></g></svg>
+</a>
+
+                            </li>
+                        </ul>
+
+                        <section class="post-full-byline-meta">
+                            <h4 class="author-name"><a href="/author/raphael/index.html">Raphael Marco</a></h4>
+                            <div class="byline-meta-content">
+                                <time class="byline-meta-date" datetime="2018-11-23">23 Nov 2018</time>
+                                <span class="byline-reading-time"><span class="bull">&bull;</span> 2 min read</span>
+                            </div>
+                        </section>
+
+                    </section>
+
+
+                </div>
+            </header>
+
+            <figure class="post-full-image">
+                <img
+                    srcset="/images/2018/11/autosave.jpg 300w,
+                            /images/2018/11/autosave.jpg 600w,
+                            /images/2018/11/autosave.jpg 1000w,
+                            /images/2018/11/autosave.jpg 2000w"
+                    sizes="(max-width: 800px) 400px,
+                        (max-width: 1170px) 1170px,
+                            2000px"
+                    src="/images/2018/11/autosave.jpg"
+                    alt="I Don&#x27;t Trust Auto-saves"
+                />
+            </figure>
+
+            <section class="post-full-content">
+                <div class="post-content">
+                    <p>This is a tale about a disastrous auto-save feature that I baked in a project that I've worked on. Make sure that your auto-save are done "automatically."</p><p>We're talking about the tabulation system that I built almost a year ago. It is used to automatically compute the final scores from the criteria percentages and the scores input by the judges. It looks like this:</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="/images/2018/11/first_screen_mockup1.png" class="kg-image"><figcaption>Scoring Table Interface</figcaption></figure><h2 id="what-ll-happen">What'll Happen?</h2><p>It has input box for the scores for each criteria for each talent, and the scores are sent asynchronously as soon as an input box loses focus.</p><p>For example, the judge enters a score for <em>Talent 1 - Criteria A</em>. The input box for <em>Talent 1 - Criteria A</em> gains focus as the judge types the score. When the judge moves to enter a score to <em>Talent 1 - Criteria B</em>, the input box for it gains focus and the input box for <em>Talent 1 - Criteria A</em> loses focus, then it sends the value to the server to update the table for <em>Talent 1 - Criteria A</em>.</p><h2 id="what-s-happening">What's Happening?</h2><figure class="kg-card kg-image-card kg-card-hascaption"><img src="/images/2018/11/scoring-demo.gif" class="kg-image"><figcaption>Scoring Process</figcaption></figure><p>Shown in the animation above is the rough simulation of the judge inputting the scores. Blue boxes indicate that the input box is in focus. Green boxes indicate that the value is sent to the server and is acknowledged and saved to the database. See the problem there?</p><p>The last input box never loses focus as there is nothing left for the focus to move. And when an input box doesn't lose focus, the event will not trigger, and the value will not be sent to the server.</p><p>To make things worse, the value for each criteria for each talent is set to zero by default thus making it possible to compute the average even if the last score was not sent.</p><h2 id="what-happened">What Happened?</h2><p>Since the server never got the last input box value, the computed scores were inaccurate and we announced a wrong winner.</p><p>It was a disaster but it has been resolved now.</p><h2 id="what-should-happen">What Should Happen?</h2><p>There's a lot that should happen instead but was overlooked due to the rushed 2-day development period and lack of proper testing.</p><ul><li>THERE SHOULD BE A <strong>SAVE</strong> BUTTON INSTEAD.</li><li>Saving a score should be <em>also</em> triggered when the user stops typing.</li><li>And do proper testing.</li></ul>
+                </div>
+            </section>
+
+
+
+        </article>
+
+    </div>
+</main>
+
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+
+                <article class="post-card post ">
+
+    <a class="post-card-image-link" href="/publishing-my-school-projects/index.html">
+        <img class="post-card-image"
+            srcset="/images/2020/02/Untitled-1-1.png 300w,
+                    /images/2020/02/Untitled-1-1.png 600w,
+                    /images/2020/02/Untitled-1-1.png 1000w,
+                    /images/2020/02/Untitled-1-1.png 2000w"
+            sizes="(max-width: 1000px) 400px, 700px"
+            loading="lazy"
+            src="/images/2020/02/Untitled-1-1.png"
+            alt="Publishing My School Projects"
+        />
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="/publishing-my-school-projects/index.html">
+
+            <header class="post-card-header">
+                <h2 class="post-card-title">Publishing My School Projects</h2>
+            </header>
+
+            <section class="post-card-excerpt">
+                    <p>During my high-school and college days, I've created several projects for my school to be used by students, faculties, and school events.  This has helped me gain experience while also</p>
+            </section>
+
+        </a>
+
+        <footer class="post-card-meta">
+            <ul class="author-list">
+                <li class="author-list-item">
+            
+                    <div class="author-name-tooltip">
+                        Raphael Marco
+                    </div>
+            
+                    <a href="/author/raphael/index.html" class="static-avatar author-profile-image"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M3.513 18.998C4.749 15.504 8.082 13 12 13s7.251 2.504 8.487 5.998C18.47 21.442 15.417 23 12 23s-6.47-1.558-8.487-4.002zM12 12c2.21 0 4-2.79 4-5s-1.79-4-4-4-4 1.79-4 4 1.79 5 4 5z" fill="#FFF"/></g></svg>
+</a>
+                </li>
+            </ul>
+            <div class="post-card-byline-content">
+                <span><a href="/author/raphael/index.html">Raphael Marco</a></span>
+                <span class="post-card-byline-date"><time datetime="2020-02-22">22 Feb 2020</time> <span class="bull">&bull;</span> 5 min read</span>
+            </div>
+        </footer>
+
+    </div>
+
+</article>
+
+                <article class="post-card post ">
+
+    <a class="post-card-image-link" href="/sending-negative-money/index.html">
+        <img class="post-card-image"
+            srcset="/images/2018/06/money-less-0.png 300w,
+                    /images/2018/06/money-less-0.png 600w,
+                    /images/2018/06/money-less-0.png 1000w,
+                    /images/2018/06/money-less-0.png 2000w"
+            sizes="(max-width: 1000px) 400px, 700px"
+            loading="lazy"
+            src="/images/2018/06/money-less-0.png"
+            alt="Sending Negative Money"
+        />
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="/sending-negative-money/index.html">
+
+            <header class="post-card-header">
+                <h2 class="post-card-title">Sending Negative Money</h2>
+            </header>
+
+            <section class="post-card-excerpt">
+                    <p>Input validation is important. Does the field ask for a phone number? Then accept everything except non-numeric characters. Does the field let you select from a number of options? Then</p>
+            </section>
+
+        </a>
+
+        <footer class="post-card-meta">
+            <ul class="author-list">
+                <li class="author-list-item">
+            
+                    <div class="author-name-tooltip">
+                        Raphael Marco
+                    </div>
+            
+                    <a href="/author/raphael/index.html" class="static-avatar author-profile-image"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M3.513 18.998C4.749 15.504 8.082 13 12 13s7.251 2.504 8.487 5.998C18.47 21.442 15.417 23 12 23s-6.47-1.558-8.487-4.002zM12 12c2.21 0 4-2.79 4-5s-1.79-4-4-4-4 1.79-4 4 1.79 5 4 5z" fill="#FFF"/></g></svg>
+</a>
+                </li>
+            </ul>
+            <div class="post-card-byline-content">
+                <span><a href="/author/raphael/index.html">Raphael Marco</a></span>
+                <span class="post-card-byline-date"><time datetime="2018-06-04">4 Jun 2018</time> <span class="bull">&bull;</span> 2 min read</span>
+            </div>
+        </footer>
+
+    </div>
+
+</article>
+        </div>
+    </div>
+</aside>
+
+
+
+
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="/index.html">raph.</a> &copy; 2021</section>
+                <nav class="site-footer-nav">
+                    <a href="/index.html">Latest Posts</a>
+                    
+                    
+                    <a href="https://ghost.org/" target="_blank" rel="noopener">Ghost</a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="/assets/built/casper2385.js?v=e34684f224"></script>
+
+    <script>
+        // Parse the URL parameter
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        // Give the parameter a variable name
+        var action = getParameterByName('action');
+
+        $(document).ready(function () {
+            if (action == 'subscribe') {
+                $('body').addClass("subscribe-success");
+            }
+
+            $('.subscribe-success-message .subscribe-close').click(function () {
+                $('.subscribe-success-message').addClass('close');
+            });
+
+            // Reset form on opening subscrion overlay
+            $('.subscribe-button').click(function() {
+                $('.subscribe-overlay form').removeClass();
+                $('.subscribe-email').val('');
+            });
+        });
+    </script>
+
+    <script>
+    $(document).ready(function () {
+        // FitVids - start
+        var $postContent = $(".post-full-content");
+        $postContent.fitVids();
+        // FitVids - end
+
+        // Replace nav with title on scroll - start
+        Casper.stickyNavTitle({
+            navSelector: '.site-nav-main',
+            titleSelector: '.post-full-title',
+            activeClass: 'nav-post-title-active'
+        });
+        // Replace nav with title on scroll - end
+
+        // Hover on avatar
+        var hoverTimeout;
+        $('.author-list-item').hover(function () {
+            var $this = $(this);
+
+            clearTimeout(hoverTimeout);
+
+            $('.author-card').removeClass('hovered');
+            $(this).children('.author-card').addClass('hovered');
+
+        }, function () {
+            var $this = $(this);
+
+            hoverTimeout = setTimeout(function () {
+                $this.children('.author-card').removeClass('hovered');
+            }, 800);
+        });
+    });
+</script>
+
+
+    <script async defer src="https://godseye.raphaelmarco.com/hello.js"></script>
+<noscript><img src="https://godseye.raphaelmarco.com/hello.gif" alt=""></noscript>
+
+</body>
+
+<!-- Mirrored from blog.raphaelmarco.com/i-dont-trust-auto-saves/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 23 May 2021 07:17:55 GMT -->
+</html>

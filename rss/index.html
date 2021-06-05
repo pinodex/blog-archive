@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[raph.]]></title><description><![CDATA[raph.]]></description><link>https://blog.raphaelmarco.com/</link><image><url>https://blog.raphaelmarco.com/favicon.png</url><title>raph.</title><link>https://blog.raphaelmarco.com/</link></image><generator>Ghost 3.35</generator><lastBuildDate>Sun, 23 May 2021 07:17:39 GMT</lastBuildDate><atom:link href="https://blog.raphaelmarco.com/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Publishing My School Projects]]></title><description><![CDATA[<p>During my high-school and college days, I've created several projects for my school to be used by students, faculties, and school events.  This has helped me gain experience while also providing something helpful for other people. It was fun.</p><h2 id="san-bartolome-high-school-website">San Bartolome High School Website</h2><p>This actually started as a class</p>]]></description><link>https://blog.raphaelmarco.com/publishing-my-school-projects/</link><guid isPermaLink="false">5d00cb5b70103a3c8b4877d6</guid><dc:creator><![CDATA[Raphael Marco]]></dc:creator><pubDate>Sat, 22 Feb 2020 08:48:00 GMT</pubDate><media:content url="/images/2020/02/Untitled-1-1.png" medium="image"/><content:encoded><![CDATA[<img src="/images/2020/02/Untitled-1-1.png" alt="Publishing My School Projects"><p>During my high-school and college days, I've created several projects for my school to be used by students, faculties, and school events.  This has helped me gain experience while also providing something helpful for other people. It was fun.</p><h2 id="san-bartolome-high-school-website">San Bartolome High School Website</h2><p>This actually started as a class project, but later discovered and was endorsed by our school principal.</p><figure class="kg-card kg-image-card kg-width-wide kg-card-hascaption"><img src="/images/2019/06/image.png" class="kg-image" alt="Publishing My School Projects"><figcaption>sbhs.ph, 2014</figcaption></figure><p>It was built with <a href="http://silex.sensiolabs.org/">Silex framework</a> and went live on <a href="https://web.archive.org/web/20161101082712/http://sbhs.ph/">sbhs.ph</a> (now defunct). It had a fully working CMS with homepage banner management, announcement management, site posts management, gallery management, and event calendar mangement.</p><p>The website also pulled latest post from the school publication websites via their RSS feeds which are hosted on Blogger.</p><p>The source is available at <a href="https://github.com/pinodex/sbhs.ph">https://github.com/pinodex/sbhs.ph</a>. Unfortunately, I lost the database schema for this website. There were no database migrations.</p><hr><h2 id="student-information-system-for-sti-novaliches">Student Information System for STI Novaliches</h2><p>College has started and I've got the opportunity to rebuild the existing grades viewing system for the school which was written in classic ASP.</p><figure class="kg-card kg-image-card kg-width-wide kg-card-hascaption"><img src="/images/2019/06/image-1.png" class="kg-image" alt="Publishing My School Projects"><figcaption>STI Novaliches Student Information System, Admin UI, 2016</figcaption></figure><p>The purpose is to let teachers upload their student grades, and allow students to view their grades online. Simple system which relies on the XLSX file (grading sheet) uploaded by the teachers, parsed, and saved to the database.</p><figure class="kg-card kg-gallery-card kg-width-wide"><div class="kg-gallery-container"><div class="kg-gallery-row"><div class="kg-gallery-image"><img src="/images/2019/06/localhost_8000_dashboard_import_grades_confirm_session-a9ccd91bef8b3892a1b26a92e9d7514d55a190ab-1.png" width="1349" height="767" alt="Publishing My School Projects"></div><div class="kg-gallery-image"><img src="/images/2020/02/image-2.png" width="1349" height="767" alt="Publishing My School Projects"></div></div></div></figure><p>And if I remembered correctly, this was also the first project where I used Vue.js (and it's 1.0!) <em>for JUST a simple modal and tab switching.</em></p><p>It was built with Laravel 5.2 and the source is available at <a href="https://github.com/pinodex/sti-novaliches-sis">https://github.com/pinodex/sti-novaliches-sis</a>.</p><hr><h2 id="sti-novaliches-employee-portal">STI Novaliches Employee Portal</h2><p>The second in my college school project, an employee portal for faculties and staffs of the school.</p><p>Its primary purpose is to let faculties and staffs file leaves online to be approved by their respective department heads, and provide an easy way to track their leave credits.</p><figure class="kg-card kg-image-card kg-width-wide"><img src="/images/2019/06/localhost_8000_--1-.png" class="kg-image" alt="Publishing My School Projects"></figure><p>In addition to that, it also features a hierarchy of approval where a leave request is approved by multiple persons in a hierarchical manner.</p><p>Users receive an email notification whenever a leave request is filed, approved, declined, or escalated.</p><figure class="kg-card kg-image-card kg-width-wide"><img src="/images/2019/06/localhost_8000_admin_requests--1-.png" class="kg-image" alt="Publishing My School Projects"></figure><p>On-boarding users are easy with the import tool.</p><figure class="kg-card kg-gallery-card kg-width-wide"><div class="kg-gallery-container"><div class="kg-gallery-row"><div class="kg-gallery-image"><img src="/images/2019/06/localhost_8000_admin_users--1--1.png" width="1349" height="767" alt="Publishing My School Projects"></div><div class="kg-gallery-image"><img src="/images/2019/06/localhost_8000_admin_users_import-1.png" width="1349" height="767" alt="Publishing My School Projects"></div><div class="kg-gallery-image"><img src="/images/2019/06/localhost_8000_admin_users_import_session_a7032d90-8587-49f2-b660-ab3e3fce2f2b_confirm-1.png" width="1349" height="767" alt="Publishing My School Projects"></div></div></div></figure><p>It was built with Laravel 5.4 and the source is available at <a href="https://github.com/pinodex/sti-novaliches-tas">https://github.com/pinodex/sti-novaliches-tas</a>.</p><hr><h2 id="sti-novaliches-student-government-election">STI Novaliches Student Government Election</h2><p>I had the opportunity to build the first automated student government election for our school. The write-up can be found <a href="https://blog.raphaelmarco.com/first-automated-student-government-elections/">here</a>.</p><figure class="kg-card kg-image-card kg-width-wide"><img src="/images/2019/06/1.png" class="kg-image" alt="Publishing My School Projects"></figure><p>It allowed the students to vote their candidates for the student government. Students were given a code which is randomly generated and given after they have presented their ID to the voting officers.</p><p>After entering the code, they were presented with a step-by-step choices of candidates per position. Candidate placing were also randomized in the interface.</p><figure class="kg-card kg-gallery-card kg-width-wide"><div class="kg-gallery-container"><div class="kg-gallery-row"><div class="kg-gallery-image"><img src="/images/2019/06/2.png" width="1280" height="720" alt="Publishing My School Projects"></div><div class="kg-gallery-image"><img src="/images/2019/06/3.png" width="1280" height="720" alt="Publishing My School Projects"></div></div><div class="kg-gallery-row"><div class="kg-gallery-image"><img src="/images/2019/06/4.png" width="1280" height="720" alt="Publishing My School Projects"></div><div class="kg-gallery-image"><img src="/images/2019/06/5.png" width="1280" height="720" alt="Publishing My School Projects"></div></div></div></figure><p>After selecting their choices, they are given an overview of their ballot and a confirmation button for their votes to be submitted and counted by the server.</p><p>It had a simple administration interface to set the election data, including the positions, the candidates, the students, and to generate the election results. Of course they are protected based on the level of access control the voting officer has.</p><figure class="kg-card kg-gallery-card kg-width-wide"><div class="kg-gallery-container"><div class="kg-gallery-row"><div class="kg-gallery-image"><img src="/images/2019/06/localhost_3333_dashboard_positions.png" width="1349" height="767" alt="Publishing My School Projects"></div><div class="kg-gallery-image"><img src="/images/2019/06/localhost_3333_dashboard_students.png" width="1349" height="767" alt="Publishing My School Projects"></div></div></div></figure><p>The architecture is server-client.</p><p>The server was built with Node.js and AdonisJS and served http for the administration pages and websockets for the clients.</p><p>The client was built with AngularJS 1.0 and Electron. It was packaged and deployed to the computers we borrowed from our computer laboratory.</p><p>I published a write-up before talking about this election system: <a href="https://blog.raphaelmarco.com/first-automated-student-government-elections/">Making The First STI College Novaliches' Student Government Automated Elections</a></p><!--kg-card-begin: html--><div style="text-align: center;">
+<video muted autoplay controls loop src="https://raphaelmarco.com/assets/videos/projects/sec-elections-demo.mp4"></video>
+</div><!--kg-card-end: html--><p>The server source is at <a href="https://github.com/pinodex/sti-novaliches-secv-server">https://github.com/pinodex/sti-novaliches-secv-server</a> and the client source is at <a href="https://github.com/pinodex/sti-novaliches-secv-client">https://github.com/pinodex/sti-novaliches-secv-client</a>.</p><hr><h2 id="mr-and-ms-sti-novaliches-online-voting">Mr. and Ms. STI Novaliches Online Voting</h2><p>Another event I developed a project for. Our school does talent search every year with Mr. and Ms STI Novaliches being one of the competitions aside from the Battle of the Bands, Dance Competition, and more.</p><p>In Mr. and Ms. STI Novaliches, we had a kind of "most voted online candidate" award and this project was built to know whoever that is.</p><figure class="kg-card kg-image-card kg-width-wide"><img src="/images/2019/06/localhost_3333_.png" class="kg-image" alt="Publishing My School Projects"></figure><p>Votes are visible and updated in real-time. Candidates positioning and categories (Mr. STI and Ms. STI) were also randomized to increase distribution.</p><figure class="kg-card kg-image-card kg-width-wide"><img src="/images/2019/06/localhost_3333_dashboard_candidates.png" class="kg-image" alt="Publishing My School Projects"></figure><p>It was built with Node.js and AdonisJS. The code is at <a href="https://github.com/pinodex/sti-novaliches-mrmsv">https://github.com/pinodex/sti-novaliches-mrmsv</a>.</p><hr><h2 id="extras">Extras</h2><ul><li><a href="https://raphaelmarco.com/projects/kyoo">Pre-thesis: Kyoo - real-time queuing management</a></li><li><a href="https://raphaelmarco.com/projects/vianderito">Thesis: Vianderito - cashier-less grocery and convenience store platform</a></li></ul><p>This was a good look back on how I learned and progressed as a student and a developer.</p>]]></content:encoded></item><item><title><![CDATA[I Don't Trust Auto-saves]]></title><description><![CDATA[This is a tale about a disastrous auto-save feature that I baked in a project that I've worked on. Make sure that your auto-save are done "automatically."]]></description><link>https://blog.raphaelmarco.com/i-dont-trust-auto-saves/</link><guid isPermaLink="false">5bf2ad4bcd91562b777c2aeb</guid><dc:creator><![CDATA[Raphael Marco]]></dc:creator><pubDate>Thu, 22 Nov 2018 19:36:46 GMT</pubDate><media:content url="/images/2018/11/autosave.jpg" medium="image"/><content:encoded><![CDATA[<img src="/images/2018/11/autosave.jpg" alt="I Don't Trust Auto-saves"><p>This is a tale about a disastrous auto-save feature that I baked in a project that I've worked on. Make sure that your auto-save are done "automatically."</p><p>We're talking about the tabulation system that I built almost a year ago. It is used to automatically compute the final scores from the criteria percentages and the scores input by the judges. It looks like this:</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="/images/2018/11/first_screen_mockup1.png" class="kg-image" alt="I Don't Trust Auto-saves"><figcaption>Scoring Table Interface</figcaption></figure><h2 id="what-ll-happen">What'll Happen?</h2><p>It has input box for the scores for each criteria for each talent, and the scores are sent asynchronously as soon as an input box loses focus.</p><p>For example, the judge enters a score for <em>Talent 1 - Criteria A</em>. The input box for <em>Talent 1 - Criteria A</em> gains focus as the judge types the score. When the judge moves to enter a score to <em>Talent 1 - Criteria B</em>, the input box for it gains focus and the input box for <em>Talent 1 - Criteria A</em> loses focus, then it sends the value to the server to update the table for <em>Talent 1 - Criteria A</em>.</p><h2 id="what-s-happening">What's Happening?</h2><figure class="kg-card kg-image-card kg-card-hascaption"><img src="/images/2018/11/scoring-demo.gif" class="kg-image" alt="I Don't Trust Auto-saves"><figcaption>Scoring Process</figcaption></figure><p>Shown in the animation above is the rough simulation of the judge inputting the scores. Blue boxes indicate that the input box is in focus. Green boxes indicate that the value is sent to the server and is acknowledged and saved to the database. See the problem there?</p><p>The last input box never loses focus as there is nothing left for the focus to move. And when an input box doesn't lose focus, the event will not trigger, and the value will not be sent to the server.</p><p>To make things worse, the value for each criteria for each talent is set to zero by default thus making it possible to compute the average even if the last score was not sent.</p><h2 id="what-happened">What Happened?</h2><p>Since the server never got the last input box value, the computed scores were inaccurate and we announced a wrong winner.</p><p>It was a disaster but it has been resolved now.</p><h2 id="what-should-happen">What Should Happen?</h2><p>There's a lot that should happen instead but was overlooked due to the rushed 2-day development period and lack of proper testing.</p><ul><li>THERE SHOULD BE A <strong>SAVE</strong> BUTTON INSTEAD.</li><li>Saving a score should be <em>also</em> triggered when the user stops typing.</li><li>And do proper testing.</li></ul>]]></content:encoded></item><item><title><![CDATA[Sending Negative Money]]></title><description><![CDATA[<!--kg-card-begin: markdown--><p>Input validation is important. Does the field ask for a phone number? Then accept everything except non-numeric characters. Does the field let you select from a number of options? Then accept everything except what is not from the options.</p>
+<p>It goes by the saying, &quot;Never trust user input&quot;</p>]]></description><link>https://blog.raphaelmarco.com/sending-negative-money/</link><guid isPermaLink="false">5bf2ad4bcd91562b777c2aed</guid><dc:creator><![CDATA[Raphael Marco]]></dc:creator><pubDate>Mon, 04 Jun 2018 07:41:40 GMT</pubDate><media:content url="/images/2018/06/money-less-0.png" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><img src="/images/2018/06/money-less-0.png" alt="Sending Negative Money"><p>Input validation is important. Does the field ask for a phone number? Then accept everything except non-numeric characters. Does the field let you select from a number of options? Then accept everything except what is not from the options.</p>
+<p>It goes by the saying, &quot;Never trust user input&quot;. And it does not only cover the fields visible in UI where the user can type, but also those who are sent in every HTTP request such as cookies, user agent, and referrer. Everything in a HTTP request should be considered a user input.</p>
+<p><img src="https://imgs.xkcd.com/comics/exploits_of_a_mom.png" alt="Sending Negative Money"><br>
+<a href="https://xkcd.com/327/">https://xkcd.com/327/</a></p>
+<p>There's also a client-side validation and server-side validation. Client-side validation refers to the validation process made by the software from the end user before sending a request to the server. While server-side validation refers to the validation process made by the serving application to the data submitted to it.</p>
+<p>Client-side validation is great as it provides the user an instant feedback to their input. But never forget to do a server-side validation as the client-side validation may be bypassed.</p>
+<p>Of course, you already know that part. And we're not here to talk about SQL Injection.</p>
+<p>Now let me tell you a hypothetical situation:</p>
+<ol>
+<li>
+<p>We have two people, John and Jane. They both have an account at Acme Bank. John has <strong>$5000</strong> in his account, and Jane has <strong>$200</strong> in her account.</p>
+</li>
+<li>
+<p>John sent <strong>$500</strong> to Jane. Now John has <strong>$4500</strong> and Jane has <strong>$700</strong>.</p>
+</li>
+<li>
+<p>Jane tried sending <strong>$1000</strong> to John but the banking system refused with the error message <em>&quot;Insufficient funds.&quot;</em></p>
+</li>
+<li>
+<p>Jane tried sending <strong>-$1000</strong> to John <em>(Yes, it's negative <strong>1000</strong>)</em>. Now John has <strong>$3500</strong> and Jane has <strong>$1700</strong>.</p>
+</li>
+</ol>
+<p>Why is that the case? Isn't Jane the one who sent the money to John, but why is it that Jane has more money than she has before and John has less money than he has before.</p>
+<h3 id="thesystemfailedtovalidatetheinput">The system failed to validate the input.</h3>
+<p>It was fine when the system refused the money transfer because of <code>A &gt; B</code>. But it failed to checked for <code>VALUE &lt; 0</code>.</p>
+<p>Because of that, the following happened:</p>
+<ul>
+<li>
+<p>John has <strong>$4500</strong> plus the <strong>-$1000</strong> sent by Jane equals <strong>$3500</strong>.</p>
+<p>4500 + (-1000) = 3500</p>
+</li>
+<li>
+<p>Jane has <strong>$700</strong> minus the <strong>-$1000</strong> she sent to John equals <strong>$1700</strong>.</p>
+<p>700 - (-1000) = 1700</p>
+</li>
+</ul>
+<p>Jane managed to take John's money by sending him a negative value.</p>
+<p>Except that it was not a hypothetical situation. I encountered the same issue with the points system of a large chain store. There's a feature where you can send points to other users.</p>
+<p>The interface says that the maximum points that can be sent is 99999. Then I started wondering... what's the minimum that I can send?</p>
+<p>I tried sending 0 (zero) points, but it wouldn't let me. The app only accepts numbers greater than 0. Hey, it's client-side validation!</p>
+<p>Now let's try server-side validation. I launched an instance of Charles Web Proxy to see what's going on behind the scenes. There I captured how the app sends requests to their server. And there I was able to send negative points and have the hypothetical scenario work.</p>
+<p>Fortunately, their system does not do this anymore. And they updated their app to include SSL pinning.</p>
+<p>But still, never ignore the fact that negative numbers exist.</p>
+<!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[Done With My First Talk]]></title><description><![CDATA[<!--kg-card-begin: markdown--><p>I did a talk. That's it. I did my first talk about web development to about 100 students of STI Novaliches. The feeling was a mixture of tense and excitement.</p>
+<p>It was for our school organization event <strong>Into The Cloud: Seminar + Code Camp</strong>. A whole-day event about Web and Android</p>]]></description><link>https://blog.raphaelmarco.com/done-with-my-first-talk/</link><guid isPermaLink="false">5bf2ad4bcd91562b777c2ae9</guid><dc:creator><![CDATA[Raphael Marco]]></dc:creator><pubDate>Fri, 17 Nov 2017 07:02:33 GMT</pubDate><media:content url="/images/2017/11/IMG_0002-1.jpg" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><img src="/images/2017/11/IMG_0002-1.jpg" alt="Done With My First Talk"><p>I did a talk. That's it. I did my first talk about web development to about 100 students of STI Novaliches. The feeling was a mixture of tense and excitement.</p>
+<p>It was for our school organization event <strong>Into The Cloud: Seminar + Code Camp</strong>. A whole-day event about Web and Android development. We did the seminar in the morning, and code camp in the afternoon.</p>
+<figure>
+<p><img src="/images/2017/11/IMG_0007.jpg" alt="Done With My First Talk"></p>
+<figcaption style="text-align: center;">
+<small>Me doing the talk</small>
+</figcaption>
+</figure>
+<p>There I gave them the glimpse of Developer Tools inside the Chrome browser. I demonstrated how to use it to debug and test elements and styles in a web page. The outline of my talk is:</p>
+<ul>
+<li>Structures in HTML
+<ul>
+<li>Elements, tags, attributes, and contents</li>
+<li>Parent-children</li>
+<li>Siblings</li>
+<li>ID vs Class</li>
+</ul>
+</li>
+<li>CSS
+<ul>
+<li>Selectors</li>
+<li>Selector precedence</li>
+<li>Multiple selectors</li>
+<li>Properties</li>
+<li>Tricks</li>
+<li>Flexbox (I decided to give an introduction to flexbox instead of the traditional methods to accomplish the styles it provide because it was easier to demonstrate and understand, and is also now widely supported)</li>
+</ul>
+</li>
+</ul>
+<p>I did not give much of the attention to JavaScript. I only showed them a simple <code>alert()</code> function because yeah, JavaScript is a mess.</p>
+<p>Done with my web development topic follows the Android development topic of my software engineering teacher <a href="http://jcescobanez.com">Mr. John Clement Escobañez</a>.</p>
+<figure>
+<p><img src="/images/2017/11/IMG_0073.jpg" alt="Done With My First Talk"></p>
+<figcaption style="text-align: center;">
+<small>Mr. Escobanez talking about Android</small>
+</figcaption>
+</figure>
+<p>It started with the discussion of the history of Android, its features, its uses, and where it is being used right now to the live demonstration of building an Android app.</p>
+<p>Before the break, we opened a mini quiz game for the participants where they answer questions of easy, medium, and hard difficulty to earn points to get to the leaderboard and receive prizes from us.</p>
+<figure>
+<p><img src="/images/2017/11/IMG_9446.jpg" alt="Done With My First Talk"></p>
+<figcaption style="text-align: center;">
+<small>Students playing the game</small>
+</figcaption>
+</figure>
+<p>The game is a web app where players catch flying clouds of differing sizes, and answer the multiple choice question to gain points.</p>
+<div style="margin:0 auto;width:30%;height:0;padding-bottom:53.4%;position:relative;"><iframe src="https://giphy.com/embed/xUNda8IsxjBFYxP7he" width="100%" height="100%" style="position:absolute" frameborder="0" class="giphy-embed" allowfullscreen></iframe></div>
+<p><em>The code for the quiz game is open source! <a href="https://github.com/pinodex/itsa-quiz">github.com/pinodex/itsa-quiz</a>.</em></p>
+<p>All in all, the event can be considered a success. Thanks to the participants, committee, and the teachers who supported the event.</p>
+<figure>
+<p><img src="/images/2017/11/IMG_9457.jpg" alt="Done With My First Talk"></p>
+<figcaption style="text-align: center;">
+<small>Code camp completers</small>
+</figcaption>
+</figure>
+<p>Also thanks to the Information Technology Students Association officers:</p>
+<ul>
+<li>Girish Daloso</li>
+<li>Kimberly Laran</li>
+<li>Karla Shane Laran</li>
+<li>Neil Patrick De Leon</li>
+<li>Jose Juan Jeremiah Relova</li>
+<li>Zeaven Jovertte Manalastas</li>
+</ul>
+<figure>
+<p><img src="/images/2017/11/IMG_9496.jpg" alt="Done With My First Talk"></p>
+</figure><!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[Redoing My Portfolio With Vue.js]]></title><description><![CDATA[<!--kg-card-begin: markdown--><p>Today I pushed a major update to my <a href="http://raphaelmarco.com">website</a>. My half-year journey with Vue.js made me decide to use it to build the SPA revamp of my website.</p>
+<p>The first I did was to grab a boilerplate for Vue.js with Webpack. I used <strong><a href="https://github.com/vuejs-templates/webpack">vuejs-templates/webpack</a></strong> for this purpose.</p>]]></description><link>https://blog.raphaelmarco.com/redoing-my-portfolio-with-vue-js/</link><guid isPermaLink="false">5bf2ad4bcd91562b777c2aea</guid><dc:creator><![CDATA[Raphael Marco]]></dc:creator><pubDate>Sun, 29 Oct 2017 14:44:49 GMT</pubDate><media:content url="/images/2017/10/main-js-1.png" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><img src="/images/2017/10/main-js-1.png" alt="Redoing My Portfolio With Vue.js"><p>Today I pushed a major update to my <a href="http://raphaelmarco.com">website</a>. My half-year journey with Vue.js made me decide to use it to build the SPA revamp of my website.</p>
+<p>The first I did was to grab a boilerplate for Vue.js with Webpack. I used <strong><a href="https://github.com/vuejs-templates/webpack">vuejs-templates/webpack</a></strong> for this purpose. It included a development server which offers my most favorite feature: hot-reloading. It saved me a lot of time as changes are automatically applied without hitting refresh in my browser. Production build is done with a single command that generates all the static files needed.</p>
+<h2 id="whatsnext">What's next?</h2>
+<p>I'm sort of looking forward to exerting an effort to support Internet Explorer. I tried it with IE 11 and it's bad. And also SEO.</p>
+<p>Here is <strong><a href="https://github.com/pinodex/portfolio">pinodex/portfolio</a></strong> for your pleasure.</p>
+<!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[Making The First STI College Novaliches' Student Government Automated Elections]]></title><description><![CDATA[<!--kg-card-begin: markdown--><p>In February, we conducted the first automated election for student government in STI College Novaliches. The aim was to minimize the effort needed to vote, and maximize the short time allocated for the election. It was great!</p>
+<p>Here I will be writing the technical stuffs I have gone through for</p>]]></description><link>https://blog.raphaelmarco.com/first-automated-student-government-elections/</link><guid isPermaLink="false">5bf2ad4bcd91562b777c2ae8</guid><dc:creator><![CDATA[Raphael Marco]]></dc:creator><pubDate>Mon, 10 Apr 2017 07:45:48 GMT</pubDate><media:content url="/images/2017/04/DSC_0309.JPG" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><img src="/images/2017/04/DSC_0309.JPG" alt="Making The First STI College Novaliches' Student Government Automated Elections"><p>In February, we conducted the first automated election for student government in STI College Novaliches. The aim was to minimize the effort needed to vote, and maximize the short time allocated for the election. It was great!</p>
+<p>Here I will be writing the technical stuffs I have gone through for this event.</p>
+<h4 id="development">Development</h4>
+<p><img src="/images/2017/04/image-1.jpg" alt="Making The First STI College Novaliches' Student Government Automated Elections"></p>
+<p>The development started in the third week of January, giving a month of preparation for the first automated election.</p>
+<p>My initial plan was to write the application with Laravel to be served on LAN. A prototype has been created and was presented to the board. Further discussion reveals the need for a real-time view of the election.</p>
+<p>I tried to work with WebSockets in PHP, but it sucks, so I ditched PHP and decided to do it with Node.js. Yes, there's a way to build a real-time app with Laravel using Pusher, but I'm still going with Node.js.</p>
+<p>I went with the client-server model, where the client application and the server application is developed separately.</p>
+<figure>
+<p><img src="/images/2017/04/image-2.jpg" alt="Making The First STI College Novaliches' Student Government Automated Elections"></p>
+<figcaption style="text-align: center;">
+<small>Pardon my Instagram photos</small>
+</figcaption>
+</figure>
+<p>I wrote the server with AdonisJs, an MVC framework that feels like Laravel. That way I can speed up development using stuffs I'm already familiar with. On the other hand, the client was a simple AngularJS + Electron app, to be distributed to designated voting machines.</p>
+<figure>
+<p><img src="/images/2017/04/Screenshot-from-2017-04-10-13-33-00.png" alt="Making The First STI College Novaliches' Student Government Automated Elections"><br>
+<img src="/images/2017/04/Screenshot-from-2017-04-10-13-35-13.png" alt="Making The First STI College Novaliches' Student Government Automated Elections"></p>
+<figcaption style="text-align: center;">
+<small>Administrator Interface</small>
+</figcaption>
+</figure>
+<h6 id="server">Server</h6>
+<ul>
+<li>AdonisJS</li>
+<li>Socket.IO</li>
+<li>MariaDB</li>
+</ul>
+<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/nDQbWNwidXwWY" width="100%" height="100%" style="position:absolute" frameborder="0" class="giphy-embed" allowfullscreen></iframe></div>
+<figure>
+    <figcaption style="text-align: center;">
+        <small>Client Interface</small>
+    </figcaption>
+</figure>
+<h6 id="client">Client</h6>
+<ul>
+<li>AngularJS</li>
+<li>Socket.IO Client</li>
+<li>Electron</li>
+</ul>
+<h4 id="preparation">Preparation</h4>
+<figure>
+<p><img src="/images/2017/04/16711551_1527824950579524_7439613621800026631_n.jpg" alt="Making The First STI College Novaliches' Student Government Automated Elections"></p>
+<figcaption style="text-align: center;">
+<small>Server Installation and Client Distribution</small>
+</figcaption>
+</figure>
+<p>Two days before the election, I installed the server and configured the clients with the help of the network guys from the school server room. After that, a short training has been given to the election technical committee who are responsible for the distribution of student voter code. Then we did a test run of the election with actual students.</p>
+<p>The server was an Intel Core i5 (3rd gen maybe) + 4GB RAM computer running Ubuntu Server 16.04. The client computers run Windows 7 (forgot the specs).</p>
+<h4 id="security">Security</h4>
+<p>Proper security measures need to be put to ensure integrity and validity of the election and results.</p>
+<p>For the physical security, the server is put in a safe area, and the disk is fully encrypted.</p>
+<p>For the network security, the server software listens to the loopback interface. All incoming ports are closed aside from port 22 (SSH). The way I connected the clients to the server is through SSH tunneling. Authentication is handled with a keypair which I manually load to each clients to establish a connection. This way we can ensure that only configured clients can connect to the server and the communication between them is encrypted.</p>
+<h4 id="electionday">Election Day</h4>
+<p>The day had come. Went to school early to reset the server and clients to ensure that no tampering has been done while I'm gone (yea). Then we officially opened the election.</p>
+<figure>
+<p><img src="/images/2017/04/DSC_0281.JPG" alt="Making The First STI College Novaliches' Student Government Automated Elections"></p>
+<figcaption style="text-align: center;">
+<small>Student Voter Code Generation Area</small>
+</figcaption>
+</figure>
+<p>Every student was provided with a five alphanumeric character code (SRNG) using Node.js crypto package, and only generated upon request to prevent possible enumeration.</p>
+<figure>
+<p><img src="/images/2017/04/DSC_0123.JPG" alt="Making The First STI College Novaliches' Student Government Automated Elections"><br>
+<img src="/images/2017/04/DSC_0218.JPG" alt="Making The First STI College Novaliches' Student Government Automated Elections"></p>
+<figcaption style="text-align: center;">
+<small>Polling Area</small>
+</figcaption>
+</figure>
+<p>The students use their generated code to login and vote. After that, their student number will be marked as <em>voted</em> to prevent them voting twice.</p>
+<figure>
+<p><img src="/images/2017/04/DSC_0334.JPG" alt="Making The First STI College Novaliches' Student Government Automated Elections"></p>
+<figcaption style="text-align: center;">
+<small>Real-time results projected at the lobby</small>
+</figcaption>
+</figure>
+<p>One thing though, I was not told that after the election, live results view (picture above) should reveal each candidate's name and picture. That feature was not available because of that, so I have to update the server code and live result client code mid-event which I did successfully. It only took few commands from my laptop to push the updated code.</p>
+<p>Another problem popped up. I have to restart the server for the changes to take effect. But restarting the server would interrupt the voting process which is not ideal. Thankfully, someone suggested an idea.</p>
+<blockquote>
+<p>Why not restart the server after the election cutoff? We will not be needing that feature until the election ends anyway.</p>
+</blockquote>
+<p>That's what I did and it worked.</p>
+<figure>
+<p><img src="/images/2017/04/DSC_0285.JPG" alt="Making The First STI College Novaliches' Student Government Automated Elections"><br>
+<img src="/images/2017/04/Capture-1.PNG" alt="Making The First STI College Novaliches' Student Government Automated Elections"></p>
+</figure>
+<h4 id="result">Result</h4>
+<p>We announced the results live one hour after the election ended. Fired up a mini broadcast studio, then started streaming to Facebook.</p>
+<figure>
+<p><img src="/images/2017/04/16649260_1530173620344657_3464411613934621225_n.jpg" alt="Making The First STI College Novaliches' Student Government Automated Elections"></p>
+</figure>
+<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fnovaliches.sti.edu%2Fvideos%2F1450122631666915%2F&width=560" width="100%" height="401" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowtransparency="true"></iframe>
+<p>For more pictures, <a href="https://www.facebook.com/pg/novaliches.sti.edu/photos/?tab=album&amp;album_id=1449974481681730">click here</a> or <a href="https://www.facebook.com/pg/novaliches.sti.edu/photos/?tab=album&amp;album_id=1449633425049169">here</a>.</p>
+<p>Thanks to the team who made this a success. The following names are part of the technical committee:</p>
+<ul>
+<li>Emilio Amoyan</li>
+<li>Paul Kristian Canlas</li>
+<li>Neil Patrick de Leon</li>
+<li>Mark Kevin Gonzales</li>
+<li>Marc Darriel Luna</li>
+<li>Zeaven Jovertte Manalastas</li>
+<li>Vince Kyle Marin</li>
+<li>Jan Raphael Peralta</li>
+<li>David Peralta</li>
+</ul>
+<!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[DevCon JavaScript Code Camp]]></title><description><![CDATA[<!--kg-card-begin: markdown--><p>JavaScript is the language of the web. It can be seen in almost any website today as it makes them richer by adding features and functionalities that can interact with the user in real time.</p>
+<p>After the recent <a href="https://blog.raphaelmarco.com/devcon-javascript-code-camp/devcon-java-code-camp/">DevCon Java Code Camp</a>, they organized a code camp again for students</p>]]></description><link>https://blog.raphaelmarco.com/devcon-javascript-code-camp/</link><guid isPermaLink="false">5bf2ad4bcd91562b777c2ae7</guid><category><![CDATA[devcon]]></category><category><![CDATA[javascript]]></category><dc:creator><![CDATA[Raphael Marco]]></dc:creator><pubDate>Sat, 02 Apr 2016 12:49:00 GMT</pubDate><media:content url="/images/2016/04/20160402_091825-1.jpg" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><img src="/images/2016/04/20160402_091825-1.jpg" alt="DevCon JavaScript Code Camp"><p>JavaScript is the language of the web. It can be seen in almost any website today as it makes them richer by adding features and functionalities that can interact with the user in real time.</p>
+<p>After the recent <a href="https://blog.raphaelmarco.com/devcon-javascript-code-camp/devcon-java-code-camp/">DevCon Java Code Camp</a>, they organized a code camp again for students about JavaScript at Microsoft Philippines HQ. It's the <a href="http://devcon.ph/events/javascript-code-camp-student-edition">DevCon JavaScript Code Camp</a>.</p>
+<p><img src="/images/2016/04/20160402_174440.jpg" alt="DevCon JavaScript Code Camp"><br>
+<img src="/images/2016/04/20160402_115257.jpg" alt="DevCon JavaScript Code Camp"></p>
+<h2 id="introduction">Introduction</h2>
+<p>The event was commenced with an introduction to DevCon or Developers Connect (shown in the header), followed by a partner talk where Mr. Miguel Arcilla, a Micosoft Developer Tools Specialist talked about Visual Studio Dev Essentials. How we can build an application with JavaScript using its components and run it on any platform, and a bit of the recent Microsoft Build 2016.</p>
+<p><img src="/images/2016/04/20160402_093556.jpg" alt="DevCon JavaScript Code Camp"></p>
+<h2 id="maincourse">Main Course</h2>
+<p>Followed by Josef Monje to discuss about JavaScript. He started it with an overview of HTML, the tags, selectors, and how it can be used with JavaScript.</p>
+<p><img src="/images/2016/04/20160402_100329.jpg" alt="DevCon JavaScript Code Camp"></p>
+<p>Then he introduced us the language, talked about creating, accessing, and modifying variables, different data types and the JavaScript weak-typing, arrays and objects, operators, and more.</p>
+<h2 id="minichallenge">Mini Challenge</h2>
+<p>After some of the language juice, he asked us to create a script that will loop in an array of numbers, check for a condition, and print an output in the browser console. He called it FizzBuzz.</p>
+<pre><code>if n is divisible by both 3 and 5
+   print &quot;FizzBuzz&quot;
+else if n is divisible by 3 only
+   print &quot;Fizz&quot;
+else if n is divisible by 5 only
+   print &quot;Buzz&quot;
+else
+   print n
+</code></pre>
+<p>After lunch, we got a mini challenge about CSS selectors. We played the <a href="https://josefmonje.com/restaurant/">CSS Diner</a> where you should select the specified element and conditions using CSS selectors.</p>
+<p><img src="/images/2016/04/Screenshot-from-2016-04-02-21-51-14.png" alt="DevCon JavaScript Code Camp"></p>
+<h2 id="therealchallenge">The Real Challenge</h2>
+<p>Finally, the Hackathon part where we were challenged to make and design the best personal site using what we have discussed earlier. After it, they asked for volunteers to present their work where the judges will pick for the winners.</p>
+<p><em>Humble brag ahead.</em></p>
+<p>I presented my work, shared what I did, and bragged how I did it without using any design framework (lol).</p>
+<p><img src="/images/2016/04/Screenshot-from-2016-04-02-22-03-46.png" alt="DevCon JavaScript Code Camp"></p>
+<p>Just one thing I forgot to mention to them. I made it responsive to smaller screen widths.</p>
+<p><img src="/images/2016/04/Screenshot-from-2016-04-02-22-07-22.png" alt="DevCon JavaScript Code Camp"></p>
+<p>I still got the best CSS award (forgot how they named the award) though and got some prizes.</p>
+<h2 id="more">More</h2>
+<p>More pictures of the event at <a href="https://www.facebook.com/DevConPH/">DevCon Philippines</a> Facebook page. Look for the hashtag <a href="https://www.facebook.com/hashtag/javascriptcodecamp">#javascriptcodecamp</a> to find them easier.</p>
+<p>Follow their Facebook page and their <a href="http://devcon.ph">website</a> for upcoming events.</p>
+<!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[DevCon Java Code Camp]]></title><description><![CDATA[<!--kg-card-begin: markdown--><p><small><em>Header photo by Paw Jacinto, <a href="http://hitchhikerpaw.com/">hitchhikerpaw.com</a></em>.</small></p>
+<p>I recently attended the <a href="http://devcon.ph/events/java-code-camp-student-edition">Java Code Camp</a> event hosted by <a href="https://www.facebook.com/DevConPH/">DevCon Philippines</a>. It was my first time attending such event and it was great! I also got a bunch of freebies after the event.</p>
+<figure>
+<p><img src="/images/2016/03/10371520_1212762995419056_7406874518931482139_n.jpg" alt="From my seat"></p>
+<figcaption style="text-align: center;">
+<small>From my seat</small>
+</figcaption>
+</figure>
+<p>The first speaker discussed about the</p>]]></description><link>https://blog.raphaelmarco.com/devcon-java-code-camp/</link><guid isPermaLink="false">5bf2ad4bcd91562b777c2ae6</guid><category><![CDATA[devcon]]></category><category><![CDATA[java]]></category><dc:creator><![CDATA[Raphael Marco]]></dc:creator><pubDate>Tue, 22 Mar 2016 07:41:53 GMT</pubDate><media:content url="/images/2016/03/wp_20160319_10_02_09_pro1.jpg" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><img src="/images/2016/03/wp_20160319_10_02_09_pro1.jpg" alt="DevCon Java Code Camp"><p><small><em>Header photo by Paw Jacinto, <a href="http://hitchhikerpaw.com/">hitchhikerpaw.com</a></em>.</small></p>
+<p>I recently attended the <a href="http://devcon.ph/events/java-code-camp-student-edition">Java Code Camp</a> event hosted by <a href="https://www.facebook.com/DevConPH/">DevCon Philippines</a>. It was my first time attending such event and it was great! I also got a bunch of freebies after the event.</p>
+<figure>
+<p><img src="/images/2016/03/10371520_1212762995419056_7406874518931482139_n.jpg" alt="DevCon Java Code Camp"></p>
+<figcaption style="text-align: center;">
+<small>From my seat</small>
+</figcaption>
+</figure>
+<p>The first speaker discussed about the Chikka API for sending SMS through the web. He talks about different use cases, and how different companies use their service.</p>
+<p>Our school might be also using their service to send SMS notifications to students. I remember seeing the Chikka logo in a webpage opened on one of the computers at the information desk.</p>
+<figure>
+<p><img src="/images/2016/03/PicsArt_03-22-02-03-12.jpg" alt="DevCon Java Code Camp"></p>
+<figcaption style="text-align: center;">
+<small>Our school's SMS notification system</small>
+</figcaption>
+</figure>
+<p>The speaker got my interest when he mentioned that they are yet to develop SDKs for different languages. The examples he provided for accessing their APIs barehandedly GET/POST URLs. So, I was like in my mind, &quot;I'm gonna make a library so others can just use it and do <code>$chikka-&gt;sendSMS('Hello World!');</code>&quot;. I added it to my projects queue.</p>
+<p>We then proceeded to the next speaker to discuss about Java. He started it with a &quot;Hello World&quot;, and the basics and concepts of the language and classes.</p>
+<p>He ask questions about the topic at random times, and give prizes to someone who can answer the question correct.</p>
+<p>After that, we were given a program that simulates a Pokemon battle, and tasked to do anything that will improve the game.</p>
+<figure>
+<p><img src="/images/2016/03/PicsArt_03-22-10-24-37.jpg" alt="DevCon Java Code Camp"></p>
+<figcaption style="text-align: center;">
+<small>Pokemon battle simulator</small>
+</figcaption>
+</figure>
+<p>Anyone that can present the changes and improvements on the game receives a prize again.</p>
+<figure>
+<p><img src="/images/2016/03/PicsArt_03-19-05-59-16.jpg" alt="DevCon Java Code Camp"></p>
+<figcaption style="text-align: center;">
+<small>Chikka and DevCon T-shirts and bag</small>
+</figcaption>
+</figure>
+<p>More on the event posted at Paw Jacinto's blog: <a href="http://hitchhikerpaw.com/2016/03/22/java-code-camp/">Java Code Camp</a>.</p>
+<!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[DS#4: Updates]]></title><description><![CDATA[<!--kg-card-begin: markdown--><p>Summer vacation has started. And as always, that calls for more time doing geeky stuffs.</p>
+<h2 id="wipboardy">[WIP] Boardy</h2>
+<p>I am continuing again my long delayed project. It will be still written with Silex framework. Trying to be minimal as possible.</p>
+<p>Support with custom themes are good so far, and extension support</p>]]></description><link>https://blog.raphaelmarco.com/ds4-updates/</link><guid isPermaLink="false">5bf2ad4bcd91562b777c2ae5</guid><category><![CDATA[dev stuffs]]></category><dc:creator><![CDATA[Raphael Marco]]></dc:creator><pubDate>Tue, 22 Mar 2016 07:39:11 GMT</pubDate><content:encoded><![CDATA[<!--kg-card-begin: markdown--><p>Summer vacation has started. And as always, that calls for more time doing geeky stuffs.</p>
+<h2 id="wipboardy">[WIP] Boardy</h2>
+<p>I am continuing again my long delayed project. It will be still written with Silex framework. Trying to be minimal as possible.</p>
+<p>Support with custom themes are good so far, and extension support are on their way. I'm currently working on events and hooks.</p>
+<h3 id="plans">Plans</h3>
+<p>Functionalities that will not be in the main code but will be done with extensions instead:</p>
+<ul>
+<li>Email notifications</li>
+<li>Email verification in registration</li>
+<li>Spam detection</li>
+<li>Captcha</li>
+</ul>
+<p>Check the repository for more <a href="https://github.com/pinodex/boardy">https://github.com/pinodex/boardy</a></p>
+<!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[DS#3: Sneak Peek]]></title><description><![CDATA[<!--kg-card-begin: markdown--><p>The development of Boardy was again, delayed. It's been a month since I posted that I'm going to continue the development of this app. And then unexpected things happened.</p>
+<p>But here's a sneak peek of the top bar of the new default theme of Boardy:</p>
+<p><img src="/images/2019/09/jsvmA0r.gif" alt="jsvmA0r"></p>
+<!--kg-card-end: markdown-->]]></description><link>https://blog.raphaelmarco.com/ds3-sneak-peek/</link><guid isPermaLink="false">5bf2ad4bcd91562b777c2ae4</guid><dc:creator><![CDATA[Raphael Marco]]></dc:creator><pubDate>Tue, 25 Aug 2015 13:33:23 GMT</pubDate><content:encoded><![CDATA[<!--kg-card-begin: markdown--><p>The development of Boardy was again, delayed. It's been a month since I posted that I'm going to continue the development of this app. And then unexpected things happened.</p>
+<p>But here's a sneak peek of the top bar of the new default theme of Boardy:</p>
+<p><img src="/images/2019/09/jsvmA0r.gif" alt="jsvmA0r"></p>
+<!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[DS#2: Boardy Revamp]]></title><description><![CDATA[<!--kg-card-begin: markdown--><p>Hey there! It's been a long time since my last update. I almost forgotten the fact that this blog exists. Whatever.</p>
+<p>Two months ago, I published the first version of Boardy, the forum software that I am working on. It was half good and half bad because of it having</p>]]></description><link>https://blog.raphaelmarco.com/ds2-boardy-revamp/</link><guid isPermaLink="false">5bf2ad4bcd91562b777c2ae3</guid><category><![CDATA[dev stuffs]]></category><dc:creator><![CDATA[Raphael Marco]]></dc:creator><pubDate>Sun, 26 Jul 2015 12:47:06 GMT</pubDate><content:encoded><![CDATA[<!--kg-card-begin: markdown--><p>Hey there! It's been a long time since my last update. I almost forgotten the fact that this blog exists. Whatever.</p>
+<p>Two months ago, I published the first version of Boardy, the forum software that I am working on. It was half good and half bad because of it having an incomplete features, and undocumented code.</p>
+<p>So I decided to rewrite the software from scratch. Not totally from scratch as I will be using some old codes and the same framework. Some things might not be compatible with the new code, but I assume that no one used the current code so there's no worries in doing migrations.</p>
+<p>That's it for now. Stay tuned for updates!</p>
+<!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[DS#1: Boardy]]></title><description><![CDATA[<!--kg-card-begin: markdown--><p><img src="/images/2019/09/nO5rOLm.png" alt="nO5rOLm"></p>
+<h3 id="introduction">Introduction</h3>
+<p>I just finished a weekend project, a simple PHP forum app called Boardy. This is the successor of the previous forum app I made before. This is also my first Silex project. I used Silex because I wanted to try different lightweight frameworks, and it was great!</p>
+<h3 id="whatcanboardydo">What can</h3>]]></description><link>https://blog.raphaelmarco.com/ds1-boardy/</link><guid isPermaLink="false">5bf2ad4bcd91562b777c2ae2</guid><category><![CDATA[dev stuffs]]></category><dc:creator><![CDATA[Raphael Marco]]></dc:creator><pubDate>Fri, 01 May 2015 15:33:43 GMT</pubDate><content:encoded><![CDATA[<!--kg-card-begin: markdown--><p><img src="/images/2019/09/nO5rOLm.png" alt="nO5rOLm"></p>
+<h3 id="introduction">Introduction</h3>
+<p>I just finished a weekend project, a simple PHP forum app called Boardy. This is the successor of the previous forum app I made before. This is also my first Silex project. I used Silex because I wanted to try different lightweight frameworks, and it was great!</p>
+<h3 id="whatcanboardydo">What can Boardy do?</h3>
+<p>Pretty much all basic features a forum app must have. No plugins, media uploads and moderation tools tho.</p>
+<p><img src="/images/2019/09/DsyslEj.png" alt="DsyslEj"></p>
+<p>There's nothing else need to talk about this right now. You can view the project at <a href="https://github.com/pinodex/boardy">github.com/pinodex/boardy</a>.</p>
+<!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[Moved to Ghost]]></title><description><![CDATA[<!--kg-card-begin: markdown--><p>It's been a long time since I visited my own website that is now full of spam comments offering shitty stuffs. So, I ditched my old blog and started a new one which is powered by Ghost.</p>
+<!--kg-card-end: markdown-->]]></description><link>https://blog.raphaelmarco.com/moved-to-ghost/</link><guid isPermaLink="false">5bf2ad4bcd91562b777c2add</guid><dc:creator><![CDATA[Raphael Marco]]></dc:creator><pubDate>Sat, 17 Jan 2015 04:43:18 GMT</pubDate><content:encoded><![CDATA[<!--kg-card-begin: markdown--><p>It's been a long time since I visited my own website that is now full of spam comments offering shitty stuffs. So, I ditched my old blog and started a new one which is powered by Ghost.</p>
+<!--kg-card-end: markdown-->]]></content:encoded></item></channel></rss>

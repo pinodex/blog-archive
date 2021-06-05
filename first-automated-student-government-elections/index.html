@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from blog.raphaelmarco.com/first-automated-student-government-elections/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 23 May 2021 07:17:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Making The First STI College Novaliches&#x27; Student Government Automated Elections</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen2385.css?v=e34684f224" />
+
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="canonical" href="index.html" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <link rel="amphtml" href="amp/index.html" />
+    
+    <meta property="og:site_name" content="raph." />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Making The First STI College Novaliches&#x27; Student Government Automated Elections" />
+    <meta property="og:description" content="In February, we conducted the first automated election for student government in STI College Novaliches. The aim was to minimize the effort needed to vote, and maximize the short time allocated for the election. It was great!  Here I will be writing the technical stuffs I have gone through for" />
+    <meta property="og:url" content="index.html" />
+    <meta property="og:image" content="/images/2017/04/DSC_0309.jpg" />
+    <meta property="article:published_time" content="2017-04-10T07:45:48.000Z" />
+    <meta property="article:modified_time" content="2017-11-01T10:50:05.000Z" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Making The First STI College Novaliches&#x27; Student Government Automated Elections" />
+    <meta name="twitter:description" content="In February, we conducted the first automated election for student government in STI College Novaliches. The aim was to minimize the effort needed to vote, and maximize the short time allocated for the election. It was great!  Here I will be writing the technical stuffs I have gone through for" />
+    <meta name="twitter:url" content="index.html" />
+    <meta name="twitter:image" content="/images/2017/04/DSC_0309.jpg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Raphael Marco" />
+    <meta property="og:image:width" content="960" />
+    <meta property="og:image:height" content="640" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "raph.",
+        "url": "https://blog.raphaelmarco.com/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "/images/2020/05/Untitled-1-1-3.png",
+            "width": 60,
+            "height": 60
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Raphael Marco",
+        "url": "https://blog.raphaelmarco.com/author/raphael/",
+        "sameAs": []
+    },
+    "headline": "Making The First STI College Novaliches&#x27; Student Government Automated Elections",
+    "url": "https://blog.raphaelmarco.com/first-automated-student-government-elections/",
+    "datePublished": "2017-04-10T07:45:48.000Z",
+    "dateModified": "2017-11-01T10:50:05.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "/images/2017/04/DSC_0309.JPG",
+        "width": 960,
+        "height": 640
+    },
+    "description": "In February, we conducted the first automated election for student government in\nSTI College Novaliches. The aim was to minimize the effort needed to vote, and\nmaximize the short time allocated for the election. It was great!\n\nHere I will be writing the technical stuffs I have gone through for this event.\n\nDevelopment\n\n\nThe development started in the third week of January, giving a month of\npreparation for the first automated election.\n\nMy initial plan was to write the application with Laravel t",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.raphaelmarco.com/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 3.35" />
+    <link rel="alternate" type="application/rss+xml" title="raph." href="/rss/index.html" />
+    <style>
+    .site-home-header .site-header-background.no-image,
+    .site-nav-main {
+        background: linear-gradient(141deg, #112835, #243b55 71%, #283c6b);
+    }
+    
+    .site-header-background:not(.responsive-header-img) .site-nav-left-wrapper:after,
+    .site-nav-main .site-nav-left-wrapper:after {
+        background: transparent;
+    }
+</style>
+
+</head>
+<body class="post-template">
+
+    <div class="site-wrapper">
+
+        
+
+<header class="site-header">
+    <div class="outer site-nav-main">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left-wrapper">
+        <div class="site-nav-left">
+                <a class="site-nav-logo" href="/index.html"><img src="/images/2020/05/Untitled-1-1-3.png" alt="raph." /></a>
+            <div class="site-nav-content">
+                    <ul class="nav">
+    <li class="nav-about"><a href="https://raphaelmarco.com/about">About</a></li>
+    <li class="nav-projects"><a href="https://raphaelmarco.com/projects">Projects</a></li>
+    <li class="nav-labs"><a href="https://raphaelmarco.com/labs">Labs</a></li>
+</ul>
+
+                    <span class="nav-post-title ">Making The First STI College Novaliches&#x27; Student Government Automated Elections</span>
+            </div>
+        </div>
+    </div>
+    <div class="site-nav-right">
+            <div class="social-links">
+            </div>
+                <a class="rss-button" href="https://feedly.com/i/subscription/feed/https://blog.raphaelmarco.com/rss/" title="RSS" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="6.18" cy="17.82" r="2.18"/><path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/></svg>
+</a>
+
+    </div>
+</nav>
+    </div>
+</div></header>
+
+
+<main id="site-main" class="site-main outer">
+    <div class="inner">
+
+        <article class="post-full post featured ">
+
+            <header class="post-full-header">
+
+
+                <h1 class="post-full-title">Making The First STI College Novaliches&#x27; Student Government Automated Elections</h1>
+
+
+                <div class="post-full-byline">
+
+                    <section class="post-full-byline-content">
+
+                        <ul class="author-list">
+                            <li class="author-list-item">
+
+                                <div class="author-card">
+                                    <div class="author-profile-image"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M3.513 18.998C4.749 15.504 8.082 13 12 13s7.251 2.504 8.487 5.998C18.47 21.442 15.417 23 12 23s-6.47-1.558-8.487-4.002zM12 12c2.21 0 4-2.79 4-5s-1.79-4-4-4-4 1.79-4 4 1.79 5 4 5z" fill="#FFF"/></g></svg>
+</div>
+                                    <div class="author-info">
+                                        <h2>Raphael Marco</h2>
+                                        <p>Read <a href="/author/raphael/index.html">more posts</a> by this author.</p>
+                                    </div>
+                                </div>
+
+                                <a href="/author/raphael/index.html" class="author-avatar author-profile-image"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M3.513 18.998C4.749 15.504 8.082 13 12 13s7.251 2.504 8.487 5.998C18.47 21.442 15.417 23 12 23s-6.47-1.558-8.487-4.002zM12 12c2.21 0 4-2.79 4-5s-1.79-4-4-4-4 1.79-4 4 1.79 5 4 5z" fill="#FFF"/></g></svg>
+</a>
+
+                            </li>
+                        </ul>
+
+                        <section class="post-full-byline-meta">
+                            <h4 class="author-name"><a href="/author/raphael/index.html">Raphael Marco</a></h4>
+                            <div class="byline-meta-content">
+                                <time class="byline-meta-date" datetime="2017-04-10">10 Apr 2017</time>
+                                <span class="byline-reading-time"><span class="bull">&bull;</span> 4 min read</span>
+                            </div>
+                        </section>
+
+                    </section>
+
+
+                </div>
+            </header>
+
+            <figure class="post-full-image">
+                <img
+                    srcset="/images/2017/04/DSC_0309.JPG 300w,
+                            /images/2017/04/DSC_0309.JPG 600w,
+                            /images/2017/04/DSC_0309.JPG 1000w,
+                            /images/2017/04/DSC_0309.JPG 2000w"
+                    sizes="(max-width: 800px) 400px,
+                        (max-width: 1170px) 1170px,
+                            2000px"
+                    src="/images/2017/04/DSC_0309.jpg"
+                    alt="Making The First STI College Novaliches&#x27; Student Government Automated Elections"
+                />
+            </figure>
+
+            <section class="post-full-content">
+                <div class="post-content">
+                    <!--kg-card-begin: markdown--><p>In February, we conducted the first automated election for student government in STI College Novaliches. The aim was to minimize the effort needed to vote, and maximize the short time allocated for the election. It was great!</p>
+<p>Here I will be writing the technical stuffs I have gone through for this event.</p>
+<h4 id="development">Development</h4>
+<p><img src="/images/2017/04/image-1.jpg" alt=""></p>
+<p>The development started in the third week of January, giving a month of preparation for the first automated election.</p>
+<p>My initial plan was to write the application with Laravel to be served on LAN. A prototype has been created and was presented to the board. Further discussion reveals the need for a real-time view of the election.</p>
+<p>I tried to work with WebSockets in PHP, but it sucks, so I ditched PHP and decided to do it with Node.js. Yes, there's a way to build a real-time app with Laravel using Pusher, but I'm still going with Node.js.</p>
+<p>I went with the client-server model, where the client application and the server application is developed separately.</p>
+<figure>
+<p><img src="/images/2017/04/image-2.jpg" alt=""></p>
+<figcaption style="text-align: center;">
+<small>Pardon my Instagram photos</small>
+</figcaption>
+</figure>
+<p>I wrote the server with AdonisJs, an MVC framework that feels like Laravel. That way I can speed up development using stuffs I'm already familiar with. On the other hand, the client was a simple AngularJS + Electron app, to be distributed to designated voting machines.</p>
+<figure>
+<p><img src="/images/2017/04/Screenshot-from-2017-04-10-13-33-00.png" alt=""><br>
+<img src="/images/2017/04/Screenshot-from-2017-04-10-13-35-13.png" alt=""></p>
+<figcaption style="text-align: center;">
+<small>Administrator Interface</small>
+</figcaption>
+</figure>
+<h6 id="server">Server</h6>
+<ul>
+<li>AdonisJS</li>
+<li>Socket.IO</li>
+<li>MariaDB</li>
+</ul>
+<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/nDQbWNwidXwWY" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+<figure>
+    <figcaption style="text-align: center;">
+        <small>Client Interface</small>
+    </figcaption>
+</figure>
+<h6 id="client">Client</h6>
+<ul>
+<li>AngularJS</li>
+<li>Socket.IO Client</li>
+<li>Electron</li>
+</ul>
+<h4 id="preparation">Preparation</h4>
+<figure>
+<p><img src="/images/2017/04/16711551_1527824950579524_7439613621800026631_n.jpg" alt=""></p>
+<figcaption style="text-align: center;">
+<small>Server Installation and Client Distribution</small>
+</figcaption>
+</figure>
+<p>Two days before the election, I installed the server and configured the clients with the help of the network guys from the school server room. After that, a short training has been given to the election technical committee who are responsible for the distribution of student voter code. Then we did a test run of the election with actual students.</p>
+<p>The server was an Intel Core i5 (3rd gen maybe) + 4GB RAM computer running Ubuntu Server 16.04. The client computers run Windows 7 (forgot the specs).</p>
+<h4 id="security">Security</h4>
+<p>Proper security measures need to be put to ensure integrity and validity of the election and results.</p>
+<p>For the physical security, the server is put in a safe area, and the disk is fully encrypted.</p>
+<p>For the network security, the server software listens to the loopback interface. All incoming ports are closed aside from port 22 (SSH). The way I connected the clients to the server is through SSH tunneling. Authentication is handled with a keypair which I manually load to each clients to establish a connection. This way we can ensure that only configured clients can connect to the server and the communication between them is encrypted.</p>
+<h4 id="electionday">Election Day</h4>
+<p>The day had come. Went to school early to reset the server and clients to ensure that no tampering has been done while I'm gone (yea). Then we officially opened the election.</p>
+<figure>
+<p><img src="/images/2017/04/DSC_0281.jpg" alt=""></p>
+<figcaption style="text-align: center;">
+<small>Student Voter Code Generation Area</small>
+</figcaption>
+</figure>
+<p>Every student was provided with a five alphanumeric character code (SRNG) using Node.js crypto package, and only generated upon request to prevent possible enumeration.</p>
+<figure>
+<p><img src="/images/2017/04/DSC_0123.jpg" alt=""><br>
+<img src="/images/2017/04/DSC_0218.jpg" alt=""></p>
+<figcaption style="text-align: center;">
+<small>Polling Area</small>
+</figcaption>
+</figure>
+<p>The students use their generated code to login and vote. After that, their student number will be marked as <em>voted</em> to prevent them voting twice.</p>
+<figure>
+<p><img src="/images/2017/04/DSC_0334.jpg" alt=""></p>
+<figcaption style="text-align: center;">
+<small>Real-time results projected at the lobby</small>
+</figcaption>
+</figure>
+<p>One thing though, I was not told that after the election, live results view (picture above) should reveal each candidate's name and picture. That feature was not available because of that, so I have to update the server code and live result client code mid-event which I did successfully. It only took few commands from my laptop to push the updated code.</p>
+<p>Another problem popped up. I have to restart the server for the changes to take effect. But restarting the server would interrupt the voting process which is not ideal. Thankfully, someone suggested an idea.</p>
+<blockquote>
+<p>Why not restart the server after the election cutoff? We will not be needing that feature until the election ends anyway.</p>
+</blockquote>
+<p>That's what I did and it worked.</p>
+<figure>
+<p><img src="/images/2017/04/DSC_0285.jpg" alt=""><br>
+<img src="/images/2017/04/Capture-1.png" alt=""></p>
+</figure>
+<h4 id="result">Result</h4>
+<p>We announced the results live one hour after the election ended. Fired up a mini broadcast studio, then started streaming to Facebook.</p>
+<figure>
+<p><img src="/images/2017/04/16649260_1530173620344657_3464411613934621225_n.jpg" alt=""></p>
+</figure>
+<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fnovaliches.sti.edu%2Fvideos%2F1450122631666915%2F&amp;width=560" width="100%" height="401" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+<p>For more pictures, <a href="https://www.facebook.com/pg/novaliches.sti.edu/photos/?tab=album&amp;album_id=1449974481681730">click here</a> or <a href="https://www.facebook.com/pg/novaliches.sti.edu/photos/?tab=album&amp;album_id=1449633425049169">here</a>.</p>
+<p>Thanks to the team who made this a success. The following names are part of the technical committee:</p>
+<ul>
+<li>Emilio Amoyan</li>
+<li>Paul Kristian Canlas</li>
+<li>Neil Patrick de Leon</li>
+<li>Mark Kevin Gonzales</li>
+<li>Marc Darriel Luna</li>
+<li>Zeaven Jovertte Manalastas</li>
+<li>Vince Kyle Marin</li>
+<li>Jan Raphael Peralta</li>
+<li>David Peralta</li>
+</ul>
+<!--kg-card-end: markdown-->
+                </div>
+            </section>
+
+
+
+        </article>
+
+    </div>
+</main>
+
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+
+                <article class="post-card post ">
+
+    <a class="post-card-image-link" href="/redoing-my-portfolio-with-vue-js/index.html">
+        <img class="post-card-image"
+            srcset="/images/2017/10/main-js-1.png 300w,
+                    /images/2017/10/main-js-1.png 600w,
+                    /images/2017/10/main-js-1.png 1000w,
+                    /images/2017/10/main-js-1.png 2000w"
+            sizes="(max-width: 1000px) 400px, 700px"
+            loading="lazy"
+            src="/images/2017/10/main-js-1.png"
+            alt="Redoing My Portfolio With Vue.js"
+        />
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="/redoing-my-portfolio-with-vue-js/index.html">
+
+            <header class="post-card-header">
+                <h2 class="post-card-title">Redoing My Portfolio With Vue.js</h2>
+            </header>
+
+            <section class="post-card-excerpt">
+                    <p>Today I pushed a major update to my website. My half-year journey with Vue.js made me decide to use it to build the SPA revamp of my website.  The</p>
+            </section>
+
+        </a>
+
+        <footer class="post-card-meta">
+            <ul class="author-list">
+                <li class="author-list-item">
+            
+                    <div class="author-name-tooltip">
+                        Raphael Marco
+                    </div>
+            
+                    <a href="/author/raphael/index.html" class="static-avatar author-profile-image"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M3.513 18.998C4.749 15.504 8.082 13 12 13s7.251 2.504 8.487 5.998C18.47 21.442 15.417 23 12 23s-6.47-1.558-8.487-4.002zM12 12c2.21 0 4-2.79 4-5s-1.79-4-4-4-4 1.79-4 4 1.79 5 4 5z" fill="#FFF"/></g></svg>
+</a>
+                </li>
+            </ul>
+            <div class="post-card-byline-content">
+                <span><a href="/author/raphael/index.html">Raphael Marco</a></span>
+                <span class="post-card-byline-date"><time datetime="2017-10-29">29 Oct 2017</time> <span class="bull">&bull;</span> 1 min read</span>
+            </div>
+        </footer>
+
+    </div>
+
+</article>
+
+                <article class="post-card post tag-devcon tag-javascript ">
+
+    <a class="post-card-image-link" href="/devcon-javascript-code-camp/index.html">
+        <img class="post-card-image"
+            srcset="/images/2016/04/20160402_091825-1.jpg 300w,
+                    /images/2016/04/20160402_091825-1.jpg 600w,
+                    /images/2016/04/20160402_091825-1.jpg 1000w,
+                    /images/2016/04/20160402_091825-1.jpg 2000w"
+            sizes="(max-width: 1000px) 400px, 700px"
+            loading="lazy"
+            src="/images/2016/04/20160402_091825-1.jpg"
+            alt="DevCon JavaScript Code Camp"
+        />
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="/devcon-javascript-code-camp/index.html">
+
+            <header class="post-card-header">
+                    <div class="post-card-primary-tag">devcon</div>
+                <h2 class="post-card-title">DevCon JavaScript Code Camp</h2>
+            </header>
+
+            <section class="post-card-excerpt">
+                    <p>JavaScript is the language of the web. It can be seen in almost any website today as it makes them richer by adding features and functionalities that can interact with</p>
+            </section>
+
+        </a>
+
+        <footer class="post-card-meta">
+            <ul class="author-list">
+                <li class="author-list-item">
+            
+                    <div class="author-name-tooltip">
+                        Raphael Marco
+                    </div>
+            
+                    <a href="/author/raphael/index.html" class="static-avatar author-profile-image"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M3.513 18.998C4.749 15.504 8.082 13 12 13s7.251 2.504 8.487 5.998C18.47 21.442 15.417 23 12 23s-6.47-1.558-8.487-4.002zM12 12c2.21 0 4-2.79 4-5s-1.79-4-4-4-4 1.79-4 4 1.79 5 4 5z" fill="#FFF"/></g></svg>
+</a>
+                </li>
+            </ul>
+            <div class="post-card-byline-content">
+                <span><a href="/author/raphael/index.html">Raphael Marco</a></span>
+                <span class="post-card-byline-date"><time datetime="2016-04-02">2 Apr 2016</time> <span class="bull">&bull;</span> 3 min read</span>
+            </div>
+        </footer>
+
+    </div>
+
+</article>
+        </div>
+    </div>
+</aside>
+
+
+
+
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="/index.html">raph.</a> &copy; 2021</section>
+                <nav class="site-footer-nav">
+                    <a href="/index.html">Latest Posts</a>
+                    
+                    
+                    <a href="https://ghost.org/" target="_blank" rel="noopener">Ghost</a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="/assets/built/casper2385.js?v=e34684f224"></script>
+
+    <script>
+        // Parse the URL parameter
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        // Give the parameter a variable name
+        var action = getParameterByName('action');
+
+        $(document).ready(function () {
+            if (action == 'subscribe') {
+                $('body').addClass("subscribe-success");
+            }
+
+            $('.subscribe-success-message .subscribe-close').click(function () {
+                $('.subscribe-success-message').addClass('close');
+            });
+
+            // Reset form on opening subscrion overlay
+            $('.subscribe-button').click(function() {
+                $('.subscribe-overlay form').removeClass();
+                $('.subscribe-email').val('');
+            });
+        });
+    </script>
+
+    <script>
+    $(document).ready(function () {
+        // FitVids - start
+        var $postContent = $(".post-full-content");
+        $postContent.fitVids();
+        // FitVids - end
+
+        // Replace nav with title on scroll - start
+        Casper.stickyNavTitle({
+            navSelector: '.site-nav-main',
+            titleSelector: '.post-full-title',
+            activeClass: 'nav-post-title-active'
+        });
+        // Replace nav with title on scroll - end
+
+        // Hover on avatar
+        var hoverTimeout;
+        $('.author-list-item').hover(function () {
+            var $this = $(this);
+
+            clearTimeout(hoverTimeout);
+
+            $('.author-card').removeClass('hovered');
+            $(this).children('.author-card').addClass('hovered');
+
+        }, function () {
+            var $this = $(this);
+
+            hoverTimeout = setTimeout(function () {
+                $this.children('.author-card').removeClass('hovered');
+            }, 800);
+        });
+    });
+</script>
+
+
+    <script async defer src="https://godseye.raphaelmarco.com/hello.js"></script>
+<noscript><img src="https://godseye.raphaelmarco.com/hello.gif" alt=""></noscript>
+
+</body>
+
+<!-- Mirrored from blog.raphaelmarco.com/first-automated-student-government-elections/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 23 May 2021 07:18:00 GMT -->
+</html>
