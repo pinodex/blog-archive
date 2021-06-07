@@ -118,7 +118,7 @@
 <p>I'm sort of looking forward to exerting an effort to support Internet Explorer. I tried it with IE 11 and it's bad. And also SEO.</p>
 <p>Here is <strong><a href="https://github.com/pinodex/portfolio">pinodex/portfolio</a></strong> for your pleasure.</p>
 <!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[Making The First STI College Novaliches' Student Government Automated Elections]]></title><description><![CDATA[<!--kg-card-begin: markdown--><p>In February, we conducted the first automated election for student government in STI College Novaliches. The aim was to minimize the effort needed to vote, and maximize the short time allocated for the election. It was great!</p>
-<p>Here I will be writing the technical stuffs I have gone through for</p>]]></description><link>https://blog.raphaelmarco.com/first-automated-student-government-elections/</link><guid isPermaLink="false">5bf2ad4bcd91562b777c2ae8</guid><dc:creator><![CDATA[Raphael Marco]]></dc:creator><pubDate>Mon, 10 Apr 2017 07:45:48 GMT</pubDate><media:content url="/images/2017/04/DSC_0309.JPG" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><img src="/images/2017/04/DSC_0309.JPG" alt="Making The First STI College Novaliches' Student Government Automated Elections"><p>In February, we conducted the first automated election for student government in STI College Novaliches. The aim was to minimize the effort needed to vote, and maximize the short time allocated for the election. It was great!</p>
+<p>Here I will be writing the technical stuffs I have gone through for</p>]]></description><link>https://blog.raphaelmarco.com/first-automated-student-government-elections/</link><guid isPermaLink="false">5bf2ad4bcd91562b777c2ae8</guid><dc:creator><![CDATA[Raphael Marco]]></dc:creator><pubDate>Mon, 10 Apr 2017 07:45:48 GMT</pubDate><media:content url="/images/2017/04/DSC_0309.jpg" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><img src="/images/2017/04/DSC_0309.jpg" alt="Making The First STI College Novaliches' Student Government Automated Elections"><p>In February, we conducted the first automated election for student government in STI College Novaliches. The aim was to minimize the effort needed to vote, and maximize the short time allocated for the election. It was great!</p>
 <p>Here I will be writing the technical stuffs I have gone through for this event.</p>
 <h4 id="development">Development</h4>
 <p><img src="/images/2017/04/image-1.jpg" alt="Making The First STI College Novaliches' Student Government Automated Elections"></p>
@@ -174,22 +174,22 @@
 <h4 id="electionday">Election Day</h4>
 <p>The day had come. Went to school early to reset the server and clients to ensure that no tampering has been done while I'm gone (yea). Then we officially opened the election.</p>
 <figure>
-<p><img src="/images/2017/04/DSC_0281.JPG" alt="Making The First STI College Novaliches' Student Government Automated Elections"></p>
+<p><img src="/images/2017/04/DSC_0281.jpg" alt="Making The First STI College Novaliches' Student Government Automated Elections"></p>
 <figcaption style="text-align: center;">
 <small>Student Voter Code Generation Area</small>
 </figcaption>
 </figure>
 <p>Every student was provided with a five alphanumeric character code (SRNG) using Node.js crypto package, and only generated upon request to prevent possible enumeration.</p>
 <figure>
-<p><img src="/images/2017/04/DSC_0123.JPG" alt="Making The First STI College Novaliches' Student Government Automated Elections"><br>
-<img src="/images/2017/04/DSC_0218.JPG" alt="Making The First STI College Novaliches' Student Government Automated Elections"></p>
+<p><img src="/images/2017/04/DSC_0123.jpg" alt="Making The First STI College Novaliches' Student Government Automated Elections"><br>
+<img src="/images/2017/04/DSC_0218.jpg" alt="Making The First STI College Novaliches' Student Government Automated Elections"></p>
 <figcaption style="text-align: center;">
 <small>Polling Area</small>
 </figcaption>
 </figure>
 <p>The students use their generated code to login and vote. After that, their student number will be marked as <em>voted</em> to prevent them voting twice.</p>
 <figure>
-<p><img src="/images/2017/04/DSC_0334.JPG" alt="Making The First STI College Novaliches' Student Government Automated Elections"></p>
+<p><img src="/images/2017/04/DSC_0334.jpg" alt="Making The First STI College Novaliches' Student Government Automated Elections"></p>
 <figcaption style="text-align: center;">
 <small>Real-time results projected at the lobby</small>
 </figcaption>
@@ -201,7 +201,7 @@
 </blockquote>
 <p>That's what I did and it worked.</p>
 <figure>
-<p><img src="/images/2017/04/DSC_0285.JPG" alt="Making The First STI College Novaliches' Student Government Automated Elections"><br>
+<p><img src="/images/2017/04/DSC_0285.jpg" alt="Making The First STI College Novaliches' Student Government Automated Elections"><br>
 <img src="/images/2017/04/Capture-1.PNG" alt="Making The First STI College Novaliches' Student Government Automated Elections"></p>
 </figure>
 <h4 id="result">Result</h4>
